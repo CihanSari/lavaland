@@ -1,0 +1,6 @@
+<lavaheader class="header lavatextFields"></lavaheader>
+
+<lavastatistics class="statistics lavatextFields" [remainingWisps]="totalNumberOfWisps-numberOfWispsCaught" [currentSpeed]="player.currentSpeed"
+  [currentRadius]="currentRadius()" [numberOfSeconds]="secondsPassed"></lavastatistics>
+<lavaCanvas class="fullScreen" [settings]="mapSettings" [player]="player" [objects]="objects" (mapDragRequest)="currentPlayerMovementRequest($event)"></lavaCanvas>
+<lavanotification class="notification lavatextFields" *ngIf="notificationText.length>0" [notificationText]="notificationText"></lavanotification>

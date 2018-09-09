@@ -1,0 +1,14 @@
+version: '3'
+services:
+  clothingweb:
+    image: node:latest
+    volumes: 
+      - ./:/tmp/nodelib
+    working_dir: /tmp/nodelib
+    command: "npm start"
+    environment:
+      - PORT=3000
+      - NODE_ENV=production
+    ports:
+      - "14231:3000"
+    

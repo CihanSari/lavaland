@@ -1,0 +1,43 @@
+@import url(//fonts.googleapis.com/css?family=Caveat);
+body {
+  color: rgb(212, 0, 212);
+  text-shadow: 2px 2px rgb(0, 0, 0);
+  font-family: "Caveat", cursive;
+}
+
+.header {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 35%;
+  right: 35%;
+}
+
+.statistics {
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+}
+
+.notification {
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  left: 20%;
+  right: 20%;
+}
+
+.lavatextFields {
+  pointer-events: none;
+  user-select: none;
+}
+
+.fullScreen {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  left: 0;
+  top: 0;
+}

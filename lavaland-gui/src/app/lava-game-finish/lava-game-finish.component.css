@@ -1,0 +1,40 @@
+@import url(//fonts.googleapis.com/css?family=Caveat);
+:host {
+  border-width: 1px;
+  margin: 0;
+  color: rgb(75, 3, 75);
+  font-size: 2.5vw;
+  font-family: "Caveat", cursive;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4vw;
+  font-family: "Caveat", cursive;
+}
+
+h3 {
+  font-size: 2vw;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+p {
+  color: darkred;
+  font-size: 1.5vw;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+@media screen and (min-width: 1000px) {
+  :host {
+    font-size: 25px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Congratulations</h1>
+<div mat-dialog-content>
+  <h3>You have won in {{data.time}} seconds!</h3>
+  <h3>Enter name for leaderboard?</h3>
+  <mat-form-field>
+    <input #nameField matInput [(ngModel)]="data.name" placeholder="Name" pattern="[A-Za-z0-9]{3,}" (input)="checkName()" required>
+  </mat-form-field>
+  <p *ngIf="invalidName">At least three English characters.</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-flat-button color="warn" (click)="onNoClick()">No Thanks</button>
+  <button mat-flat-button [disabled]="invalidName" cdkFocusInitial (click)="ok()">Ok</button>
+</div>
