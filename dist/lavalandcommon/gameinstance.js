@@ -1,13 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const uuid = require("uuid");
+const uuid_1 = require("uuid");
 class GameInstance {
     constructor(map) {
         this.map = map;
-        this.id = uuid();
+        this.id = uuid_1.v4();
         this.onclose = () => { };
         this.gameSessionSent = false;
-        this.mapSent = false;
         this.container = {};
     }
 }

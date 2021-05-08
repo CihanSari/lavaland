@@ -1,14 +1,16 @@
-import { Injectable } from "@angular/core";
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
+
 import {
   ClientMessageReasons,
   GameMap,
   GameSessionRequestResponse,
   MapFinished,
-  MapFinishedResponse
-} from "../../../lavalandcommon";
-import { Subject } from "rxjs";
-import { LeaderboardData } from "./lava-leaderboard/lava-leaderboard.component";
+  MapFinishedResponse,
+} from '../../../lavalandcommon';
 import { isDebug } from './isDebug';
+import { LeaderboardData } from './lava-leaderboard/lava-leaderboard.component';
 
 const devModeApiPaths = {
   [ClientMessageReasons.GameSessionRequest]: "http://localhost:8080/api/gamesession/",
@@ -29,13 +31,14 @@ export class BackendService {
   private leaderboard: Subject<LeaderboardData> = new Subject();
   readonly $map = this.map.asObservable();
   readonly $leaderboard = this.leaderboard.asObservable();
-  constructor() {
+  constructor(private http: HttpClient) {
     this.initGameSession();
   }
 
   private async initGameSession() {
     const response = await fetch(apiPaths[ClientMessageReasons.GameSessionRequest]);
     const gameSessionRequestResponse: GameSessionRequestResponse = await response.json();
+    console.log('initGameSession', gameSessionRequestResponse);
     this.gameId = gameSessionRequestResponse.gameId;
     this.map.next(gameSessionRequestResponse.gameMap);
   }
@@ -51,11 +54,8 @@ export class BackendService {
       gameId: this.gameId,
       name
     };
-    const response = await fetch(apiPaths[ClientMessageReasons.MapFinished], {
-      method: 'post',
-      body: JSON.stringify(mapFinishedRequest)
-    });
-    const mapFinishedResponse: MapFinishedResponse = await response.json();
+    console.log(mapFinishedRequest)
+    const mapFinishedResponse = await this.http.post<MapFinishedResponse>(apiPaths[ClientMessageReasons.MapFinished], mapFinishedRequest).toPromise();
     this.leaderboard.next(mapFinishedResponse.leaderboard);
   }
 }

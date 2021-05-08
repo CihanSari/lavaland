@@ -1,5 +1,6 @@
-import { Component, Inject } from "@angular/core";
-import { MatDialogRef, MAT_DIALOG_DATA } from "@angular/material/dialog";
+import { Component, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+
 export type LeaderboardData = { name: string; duration: number }[];
 @Component({
   selector: "lava-leaderboard",
@@ -10,5 +11,6 @@ export class LavaLeaderboardComponent {
   constructor(
     public dialogRef: MatDialogRef<LavaLeaderboardComponent>,
     @Inject(MAT_DIALOG_DATA) public data: LeaderboardData
-  ) {}
+  ) {
+  }
 }

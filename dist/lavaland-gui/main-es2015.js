@@ -210,7 +210,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<lavaheader class=\"header lavatextFields\"></lavaheader>\n\n<lavastatistics class=\"statistics lavatextFields\" [remainingWisps]=\"totalNumberOfWisps-numberOfWispsCaught\" [currentSpeed]=\"player.currentSpeed\"\n  [currentRadius]=\"currentRadius()\" [numberOfSeconds]=\"secondsPassed\"></lavastatistics>\n<lavaCanvas class=\"fullScreen\" [settings]=\"mapSettings\" [player]=\"player\" [objects]=\"objects\" (mapDragRequest)=\"currentPlayerMovementRequest($event)\"></lavaCanvas>\n<lavanotification class=\"notification lavatextFields\" *ngIf=\"notificationText.length>0\" [notificationText]=\"notificationText\"></lavanotification>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<lavaheader class=\"header lavatextFields\"></lavaheader>\r\n\r\n<lavastatistics class=\"statistics lavatextFields\" [remainingWisps]=\"totalNumberOfWisps-numberOfWispsCaught\" [currentSpeed]=\"player.currentSpeed\"\r\n  [currentRadius]=\"currentRadius()\" [numberOfSeconds]=\"secondsPassed\"></lavastatistics>\r\n<lavaCanvas class=\"fullScreen\" [settings]=\"mapSettings\" [player]=\"player\" [objects]=\"objects\" (mapDragRequest)=\"currentPlayerMovementRequest($event)\"></lavaCanvas>\r\n<lavanotification class=\"notification lavatextFields\" *ngIf=\"notificationText.length>0\" [notificationText]=\"notificationText\"></lavanotification>\r\n");
 
 /***/ }),
 
@@ -223,7 +223,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 mat-dialog-title>Congratulations</h1>\n<div mat-dialog-content>\n  <h3>You have won in {{data.time}} seconds!</h3>\n  <h3>Enter name for leaderboard?</h3>\n  <mat-form-field>\n    <input #nameField matInput [(ngModel)]=\"data.name\" placeholder=\"Name\" pattern=\"[A-Za-z0-9]{3,}\" (input)=\"checkName()\" required>\n  </mat-form-field>\n  <p *ngIf=\"invalidName\">At least three English characters.</p>\n</div>\n<div mat-dialog-actions>\n  <button mat-flat-button color=\"warn\" (click)=\"onNoClick()\">No Thanks</button>\n  <button mat-flat-button [disabled]=\"invalidName\" cdkFocusInitial (click)=\"ok()\">Ok</button>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 mat-dialog-title>Congratulations</h1>\r\n<div mat-dialog-content>\r\n  <h3>You have won in {{data.time}} seconds!</h3>\r\n  <h3>Enter name for leaderboard?</h3>\r\n  <mat-form-field>\r\n    <input #nameField matInput [(ngModel)]=\"data.name\" placeholder=\"Name\" pattern=\"[A-Za-z0-9]{3,}\" (input)=\"checkName()\" required>\r\n  </mat-form-field>\r\n  <p *ngIf=\"invalidName\">At least three English characters.</p>\r\n</div>\r\n<div mat-dialog-actions>\r\n  <button mat-flat-button color=\"warn\" (click)=\"onNoClick()\">No Thanks</button>\r\n  <button mat-flat-button [disabled]=\"invalidName\" cdkFocusInitial (click)=\"ok()\">Ok</button>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -236,7 +236,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1>Lava Land</h1>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1>Lava Land</h1>\r\n");
 
 /***/ }),
 
@@ -249,7 +249,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 mat-dialog-title>Leaderboards</h1>\n<ol>\n  <li *ngFor=\"let entry of data\">\n    {{entry.name}} ({{entry.duration}} seconds)\n  </li>\n</ol>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 mat-dialog-title>Leaderboards</h1>\r\n<ol>\r\n  <li *ngFor=\"let entry of data\">\r\n    {{entry.name}} ({{entry.duration}} seconds)\r\n  </li>\r\n</ol>\r\n");
 
 /***/ }),
 
@@ -262,7 +262,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p *ngFor=\"let text of notificationText\">{{text}}</p>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<p *ngFor=\"let text of notificationText\">{{text}}</p>\r\n");
 
 /***/ }),
 
@@ -275,7 +275,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"sidenav\">\n  <table>\n    <tr>\n      <td class=\"title\">Remaining</td>\n      <td class=\"value\">{{remainingWisps}}</td>\n    </tr>\n    <tr>\n      <td class=\"title\">Time</td>\n      <td class=\"value\">{{numberOfSeconds}}s</td>\n    </tr>\n    <tr>\n      <td class=\"title\">Speed</td>\n      <td class=\"value\">{{currentSpeed}}%</td>\n    </tr>\n    <tr>\n      <td class=\"title\">Power</td>\n      <td class=\"value\">{{currentRadius}}</td>\n    </tr>\n  </table>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"sidenav\">\r\n  <table>\r\n    <tr>\r\n      <td class=\"title\">Remaining</td>\r\n      <td class=\"value\">{{remainingWisps}}</td>\r\n    </tr>\r\n    <tr>\r\n      <td class=\"title\">Time</td>\r\n      <td class=\"value\">{{numberOfSeconds}}s</td>\r\n    </tr>\r\n    <tr>\r\n      <td class=\"title\">Speed</td>\r\n      <td class=\"value\">{{currentSpeed}}%</td>\r\n    </tr>\r\n    <tr>\r\n      <td class=\"title\">Power</td>\r\n      <td class=\"value\">{{currentRadius}}</td>\r\n    </tr>\r\n  </table>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -283,7 +283,7 @@ __webpack_require__.r(__webpack_exports__);
 /*!*****************************************!*\
   !*** ./node_modules/tslib/tslib.es6.js ***!
   \*****************************************/
-/*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __exportStar, __values, __read, __spread, __spreadArrays, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault */
+/*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __createBinding, __exportStar, __values, __read, __spread, __spreadArrays, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault, __classPrivateFieldGet, __classPrivateFieldSet */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -296,6 +296,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__metadata", function() { return __metadata; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__awaiter", function() { return __awaiter; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__generator", function() { return __generator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__createBinding", function() { return __createBinding; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__exportStar", function() { return __exportStar; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__values", function() { return __values; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__read", function() { return __read; });
@@ -308,19 +309,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__makeTemplateObject", function() { return __makeTemplateObject; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importStar", function() { return __importStar; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importDefault", function() { return __importDefault; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__classPrivateFieldGet", function() { return __classPrivateFieldGet; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__classPrivateFieldSet", function() { return __classPrivateFieldSet; });
 /*! *****************************************************************************
-Copyright (c) Microsoft Corporation. All rights reserved.
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use
-this file except in compliance with the License. You may obtain a copy of the
-License at http://www.apache.org/licenses/LICENSE-2.0
+Copyright (c) Microsoft Corporation.
 
-THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
-WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
-MERCHANTABLITY OR NON-INFRINGEMENT.
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
 
-See the Apache Version 2.0 License for specific language governing permissions
-and limitations under the License.
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
 /* global Reflect, Promise */
 
@@ -376,10 +379,11 @@ function __metadata(metadataKey, metadataValue) {
 }
 
 function __awaiter(thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
         function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 }
@@ -412,19 +416,25 @@ function __generator(thisArg, body) {
     }
 }
 
+function __createBinding(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}
+
 function __exportStar(m, exports) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+    for (var p in m) if (p !== "default" && !exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 
 function __values(o) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
     if (m) return m.call(o);
-    return {
+    if (o && typeof o.length === "number") return {
         next: function () {
             if (o && i >= o.length) o = void 0;
             return { value: o && o[i++], done: !o };
         }
     };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
 }
 
 function __read(o, n) {
@@ -505,6 +515,21 @@ function __importDefault(mod) {
     return (mod && mod.__esModule) ? mod : { default: mod };
 }
 
+function __classPrivateFieldGet(receiver, privateMap) {
+    if (!privateMap.has(receiver)) {
+        throw new TypeError("attempted to get private field on non-instance");
+    }
+    return privateMap.get(receiver);
+}
+
+function __classPrivateFieldSet(receiver, privateMap, value) {
+    if (!privateMap.has(receiver)) {
+        throw new TypeError("attempted to set private field on non-instance");
+    }
+    privateMap.set(receiver, value);
+    return value;
+}
+
 
 /***/ }),
 
@@ -517,7 +542,7 @@ function __importDefault(mod) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("@import url(//fonts.googleapis.com/css?family=Caveat);\r\nbody {\r\n  color: rgb(212, 0, 212);\r\n  text-shadow: 2px 2px rgb(0, 0, 0);\r\n  font-family: \"Caveat\", cursive;\r\n}\r\n.header {\r\n  position: fixed;\r\n  z-index: 1;\r\n  top: 0;\r\n  left: 35%;\r\n  right: 35%;\r\n}\r\n.statistics {\r\n  position: fixed;\r\n  z-index: 1;\r\n  bottom: 0;\r\n  left: 0;\r\n}\r\n.notification {\r\n  position: fixed;\r\n  z-index: 1;\r\n  bottom: 0;\r\n  left: 20%;\r\n  right: 20%;\r\n}\r\n.lavatextFields {\r\n  pointer-events: none;\r\n  -webkit-user-select: none;\r\n     -moz-user-select: none;\r\n      -ms-user-select: none;\r\n          user-select: none;\r\n}\r\n.fullScreen {\r\n  width: 100%;\r\n  height: 100%;\r\n  position: absolute;\r\n  display: -webkit-box;\r\n  display: flex;\r\n  left: 0;\r\n  top: 0;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEscURBQXFEO0FBQ3JEO0VBQ0UsdUJBQXVCO0VBQ3ZCLGlDQUFpQztFQUNqQyw4QkFBOEI7QUFDaEM7QUFFQTtFQUNFLGVBQWU7RUFDZixVQUFVO0VBQ1YsTUFBTTtFQUNOLFNBQVM7RUFDVCxVQUFVO0FBQ1o7QUFFQTtFQUNFLGVBQWU7RUFDZixVQUFVO0VBQ1YsU0FBUztFQUNULE9BQU87QUFDVDtBQUVBO0VBQ0UsZUFBZTtFQUNmLFVBQVU7RUFDVixTQUFTO0VBQ1QsU0FBUztFQUNULFVBQVU7QUFDWjtBQUVBO0VBQ0Usb0JBQW9CO0VBQ3BCLHlCQUFpQjtLQUFqQixzQkFBaUI7TUFBakIscUJBQWlCO1VBQWpCLGlCQUFpQjtBQUNuQjtBQUVBO0VBQ0UsV0FBVztFQUNYLFlBQVk7RUFDWixrQkFBa0I7RUFDbEIsb0JBQWE7RUFBYixhQUFhO0VBQ2IsT0FBTztFQUNQLE1BQU07QUFDUiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCB1cmwoLy9mb250cy5nb29nbGVhcGlzLmNvbS9jc3M/ZmFtaWx5PUNhdmVhdCk7XHJcbmJvZHkge1xyXG4gIGNvbG9yOiByZ2IoMjEyLCAwLCAyMTIpO1xyXG4gIHRleHQtc2hhZG93OiAycHggMnB4IHJnYigwLCAwLCAwKTtcclxuICBmb250LWZhbWlseTogXCJDYXZlYXRcIiwgY3Vyc2l2ZTtcclxufVxyXG5cclxuLmhlYWRlciB7XHJcbiAgcG9zaXRpb246IGZpeGVkO1xyXG4gIHotaW5kZXg6IDE7XHJcbiAgdG9wOiAwO1xyXG4gIGxlZnQ6IDM1JTtcclxuICByaWdodDogMzUlO1xyXG59XHJcblxyXG4uc3RhdGlzdGljcyB7XHJcbiAgcG9zaXRpb246IGZpeGVkO1xyXG4gIHotaW5kZXg6IDE7XHJcbiAgYm90dG9tOiAwO1xyXG4gIGxlZnQ6IDA7XHJcbn1cclxuXHJcbi5ub3RpZmljYXRpb24ge1xyXG4gIHBvc2l0aW9uOiBmaXhlZDtcclxuICB6LWluZGV4OiAxO1xyXG4gIGJvdHRvbTogMDtcclxuICBsZWZ0OiAyMCU7XHJcbiAgcmlnaHQ6IDIwJTtcclxufVxyXG5cclxuLmxhdmF0ZXh0RmllbGRzIHtcclxuICBwb2ludGVyLWV2ZW50czogbm9uZTtcclxuICB1c2VyLXNlbGVjdDogbm9uZTtcclxufVxyXG5cclxuLmZ1bGxTY3JlZW4ge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGhlaWdodDogMTAwJTtcclxuICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBsZWZ0OiAwO1xyXG4gIHRvcDogMDtcclxufVxyXG4iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("@import url(//fonts.googleapis.com/css?family=Caveat);\r\nbody {\r\n  color: rgb(212, 0, 212);\r\n  text-shadow: 2px 2px rgb(0, 0, 0);\r\n  font-family: \"Caveat\", cursive;\r\n}\r\n.header {\r\n  position: fixed;\r\n  z-index: 1;\r\n  top: 0;\r\n  left: 35%;\r\n  right: 35%;\r\n}\r\n.statistics {\r\n  position: fixed;\r\n  z-index: 1;\r\n  bottom: 0;\r\n  left: 0;\r\n}\r\n.notification {\r\n  position: fixed;\r\n  z-index: 1;\r\n  bottom: 0;\r\n  left: 20%;\r\n  right: 20%;\r\n}\r\n.lavatextFields {\r\n  pointer-events: none;\r\n  -webkit-user-select: none;\r\n     -moz-user-select: none;\r\n      -ms-user-select: none;\r\n          user-select: none;\r\n}\r\n.fullScreen {\r\n  width: 100%;\r\n  height: 100%;\r\n  position: absolute;\r\n  display: flex;\r\n  left: 0;\r\n  top: 0;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEscURBQXFEO0FBQ3JEO0VBQ0UsdUJBQXVCO0VBQ3ZCLGlDQUFpQztFQUNqQyw4QkFBOEI7QUFDaEM7QUFFQTtFQUNFLGVBQWU7RUFDZixVQUFVO0VBQ1YsTUFBTTtFQUNOLFNBQVM7RUFDVCxVQUFVO0FBQ1o7QUFFQTtFQUNFLGVBQWU7RUFDZixVQUFVO0VBQ1YsU0FBUztFQUNULE9BQU87QUFDVDtBQUVBO0VBQ0UsZUFBZTtFQUNmLFVBQVU7RUFDVixTQUFTO0VBQ1QsU0FBUztFQUNULFVBQVU7QUFDWjtBQUVBO0VBQ0Usb0JBQW9CO0VBQ3BCLHlCQUFpQjtLQUFqQixzQkFBaUI7TUFBakIscUJBQWlCO1VBQWpCLGlCQUFpQjtBQUNuQjtBQUVBO0VBQ0UsV0FBVztFQUNYLFlBQVk7RUFDWixrQkFBa0I7RUFDbEIsYUFBYTtFQUNiLE9BQU87RUFDUCxNQUFNO0FBQ1IiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgdXJsKC8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzP2ZhbWlseT1DYXZlYXQpO1xyXG5ib2R5IHtcclxuICBjb2xvcjogcmdiKDIxMiwgMCwgMjEyKTtcclxuICB0ZXh0LXNoYWRvdzogMnB4IDJweCByZ2IoMCwgMCwgMCk7XHJcbiAgZm9udC1mYW1pbHk6IFwiQ2F2ZWF0XCIsIGN1cnNpdmU7XHJcbn1cclxuXHJcbi5oZWFkZXIge1xyXG4gIHBvc2l0aW9uOiBmaXhlZDtcclxuICB6LWluZGV4OiAxO1xyXG4gIHRvcDogMDtcclxuICBsZWZ0OiAzNSU7XHJcbiAgcmlnaHQ6IDM1JTtcclxufVxyXG5cclxuLnN0YXRpc3RpY3Mge1xyXG4gIHBvc2l0aW9uOiBmaXhlZDtcclxuICB6LWluZGV4OiAxO1xyXG4gIGJvdHRvbTogMDtcclxuICBsZWZ0OiAwO1xyXG59XHJcblxyXG4ubm90aWZpY2F0aW9uIHtcclxuICBwb3NpdGlvbjogZml4ZWQ7XHJcbiAgei1pbmRleDogMTtcclxuICBib3R0b206IDA7XHJcbiAgbGVmdDogMjAlO1xyXG4gIHJpZ2h0OiAyMCU7XHJcbn1cclxuXHJcbi5sYXZhdGV4dEZpZWxkcyB7XHJcbiAgcG9pbnRlci1ldmVudHM6IG5vbmU7XHJcbiAgdXNlci1zZWxlY3Q6IG5vbmU7XHJcbn1cclxuXHJcbi5mdWxsU2NyZWVuIHtcclxuICB3aWR0aDogMTAwJTtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbiAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgbGVmdDogMDtcclxuICB0b3A6IDA7XHJcbn1cclxuIl19 */");
 
 /***/ }),
 
@@ -533,21 +558,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LavaLandComponent", function() { return LavaLandComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _turn_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./turn.service */ "./src/app/turn.service.ts");
-/* harmony import */ var _turnevent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./turnevent */ "./src/app/turnevent.ts");
-/* harmony import */ var _wisp__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./wisp */ "./src/app/wisp.ts");
-/* harmony import */ var _speedboost__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./speedboost */ "./src/app/speedboost.ts");
-/* harmony import */ var _speedbump__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./speedbump */ "./src/app/speedbump.ts");
-/* harmony import */ var _exit__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./exit */ "./src/app/exit.ts");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-/* harmony import */ var _lavastate__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./lavastate */ "./src/app/lavastate.ts");
-/* harmony import */ var _backend_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./backend.service */ "./src/app/backend.service.ts");
-/* harmony import */ var _lavacanvas__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../lavacanvas */ "./src/lavacanvas/index.ts");
-/* harmony import */ var _player__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./player */ "./src/app/player.ts");
-/* harmony import */ var _node_modules_angular_material__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../node_modules/@angular/material */ "./node_modules/@angular/material/esm2015/material.js");
-/* harmony import */ var _lava_game_finish_lava_game_finish_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./lava-game-finish/lava-game-finish.component */ "./src/app/lava-game-finish/lava-game-finish.component.ts");
-/* harmony import */ var _lava_leaderboard_lava_leaderboard_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./lava-leaderboard/lava-leaderboard.component */ "./src/app/lava-leaderboard/lava-leaderboard.component.ts");
-/* harmony import */ var _isDebug__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./isDebug */ "./src/app/isDebug.ts");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var _node_modules_angular_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../node_modules/@angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+/* harmony import */ var _lavacanvas__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../lavacanvas */ "./src/lavacanvas/index.ts");
+/* harmony import */ var _backend_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./backend.service */ "./src/app/backend.service.ts");
+/* harmony import */ var _exit__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./exit */ "./src/app/exit.ts");
+/* harmony import */ var _isDebug__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./isDebug */ "./src/app/isDebug.ts");
+/* harmony import */ var _lava_game_finish_lava_game_finish_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./lava-game-finish/lava-game-finish.component */ "./src/app/lava-game-finish/lava-game-finish.component.ts");
+/* harmony import */ var _lava_leaderboard_lava_leaderboard_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./lava-leaderboard/lava-leaderboard.component */ "./src/app/lava-leaderboard/lava-leaderboard.component.ts");
+/* harmony import */ var _lavastate__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./lavastate */ "./src/app/lavastate.ts");
+/* harmony import */ var _player__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./player */ "./src/app/player.ts");
+/* harmony import */ var _speedboost__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./speedboost */ "./src/app/speedboost.ts");
+/* harmony import */ var _speedbump__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./speedbump */ "./src/app/speedbump.ts");
+/* harmony import */ var _turn_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./turn.service */ "./src/app/turn.service.ts");
+/* harmony import */ var _turnevent__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./turnevent */ "./src/app/turnevent.ts");
+/* harmony import */ var _wisp__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./wisp */ "./src/app/wisp.ts");
 
 
 
@@ -579,7 +604,7 @@ let LavaLandComponent = class LavaLandComponent {
         this.exitPortalsHidden = [];
         this.exitPortalsOpened = [];
         // This game's details
-        this.gameState = new rxjs__WEBPACK_IMPORTED_MODULE_8__["BehaviorSubject"](_lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].Starting);
+        this.gameState = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](_lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].Starting);
         this.startTime = new Date();
         this.secondsPassed = 0;
         // Player statistics
@@ -588,7 +613,7 @@ let LavaLandComponent = class LavaLandComponent {
         this.playerInfluenceRadius = 1;
         // Notification text
         this.notificationText = [];
-        this.player = new _player__WEBPACK_IMPORTED_MODULE_12__["PlayerObject"](new _lavacanvas__WEBPACK_IMPORTED_MODULE_11__["Asset"]("/assets/characters/ralph.png", _lavacanvas__WEBPACK_IMPORTED_MODULE_11__["AssetColor"].OriginalColor, { x: 1, y: 2 }));
+        this.player = new _player__WEBPACK_IMPORTED_MODULE_11__["PlayerObject"](new _lavacanvas__WEBPACK_IMPORTED_MODULE_4__["Asset"]("/assets/characters/ralph.png", _lavacanvas__WEBPACK_IMPORTED_MODULE_4__["AssetColor"].OriginalColor, { x: 1, y: 2 }));
     }
     ngOnInit() {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
@@ -600,12 +625,12 @@ let LavaLandComponent = class LavaLandComponent {
             // ***                                                ***
             //--------------------------------------------------------
             this.backendService.$map.subscribe(map => this.onMapReceived(map), exception => {
-                if (Object(_isDebug__WEBPACK_IMPORTED_MODULE_16__["isDebug"])()) {
+                if (Object(_isDebug__WEBPACK_IMPORTED_MODULE_7__["isDebug"])()) {
                     console.warn("[LavaLandComponent] Map error!");
                     console.error(exception);
                 }
             }, () => {
-                if (Object(_isDebug__WEBPACK_IMPORTED_MODULE_16__["isDebug"])()) {
+                if (Object(_isDebug__WEBPACK_IMPORTED_MODULE_7__["isDebug"])()) {
                     console.warn("[LavaLandComponent] Map subscription completed!");
                 }
             });
@@ -623,9 +648,9 @@ let LavaLandComponent = class LavaLandComponent {
             //--------------------------------------------------------
             this.mapSettings = {
                 assets: [
-                    new _lavacanvas__WEBPACK_IMPORTED_MODULE_11__["Asset"]("/assets/maptiles/water.png"),
-                    new _lavacanvas__WEBPACK_IMPORTED_MODULE_11__["Asset"]("/assets/maptiles/land.png"),
-                    new _lavacanvas__WEBPACK_IMPORTED_MODULE_11__["Asset"]("/assets/maptiles/lava.png")
+                    new _lavacanvas__WEBPACK_IMPORTED_MODULE_4__["Asset"]("/assets/maptiles/water.png"),
+                    new _lavacanvas__WEBPACK_IMPORTED_MODULE_4__["Asset"]("/assets/maptiles/land.png"),
+                    new _lavacanvas__WEBPACK_IMPORTED_MODULE_4__["Asset"]("/assets/maptiles/lava.png")
                 ],
                 map
             };
@@ -637,16 +662,16 @@ let LavaLandComponent = class LavaLandComponent {
             // ***                                                ***
             //--------------------------------------------------------
             for (let i = 0; i < this.totalNumberOfWisps; i += 1) {
-                this.mapWisps.push(new _wisp__WEBPACK_IMPORTED_MODULE_4__["Wisp"](new _lavacanvas__WEBPACK_IMPORTED_MODULE_11__["Asset"]("/assets/characters/wisp.png", _lavacanvas__WEBPACK_IMPORTED_MODULE_11__["AssetColor"].RandomColor, { x: 1, y: 2 })));
+                this.mapWisps.push(new _wisp__WEBPACK_IMPORTED_MODULE_16__["Wisp"](new _lavacanvas__WEBPACK_IMPORTED_MODULE_4__["Asset"]("/assets/characters/wisp.png", _lavacanvas__WEBPACK_IMPORTED_MODULE_4__["AssetColor"].RandomColor, { x: 1, y: 2 })));
             }
             for (let i = 0; i < 20; i += 1) {
-                this.mapSpeedBoosters.push(new _speedboost__WEBPACK_IMPORTED_MODULE_5__["SpeedBoost"](new _lavacanvas__WEBPACK_IMPORTED_MODULE_11__["Asset"]("/assets/resources/GoodMushroom.png", _lavacanvas__WEBPACK_IMPORTED_MODULE_11__["AssetColor"].OriginalColor)));
+                this.mapSpeedBoosters.push(new _speedboost__WEBPACK_IMPORTED_MODULE_12__["SpeedBoost"](new _lavacanvas__WEBPACK_IMPORTED_MODULE_4__["Asset"]("/assets/resources/GoodMushroom.png", _lavacanvas__WEBPACK_IMPORTED_MODULE_4__["AssetColor"].OriginalColor)));
             }
             for (let i = 0; i < 10; i += 1) {
-                this.mapSpeedBumps.push(new _speedbump__WEBPACK_IMPORTED_MODULE_6__["SpeedBump"](new _lavacanvas__WEBPACK_IMPORTED_MODULE_11__["Asset"]("/assets/resources/RedMushroom.png", _lavacanvas__WEBPACK_IMPORTED_MODULE_11__["AssetColor"].OriginalColor)));
+                this.mapSpeedBumps.push(new _speedbump__WEBPACK_IMPORTED_MODULE_13__["SpeedBump"](new _lavacanvas__WEBPACK_IMPORTED_MODULE_4__["Asset"]("/assets/resources/RedMushroom.png", _lavacanvas__WEBPACK_IMPORTED_MODULE_4__["AssetColor"].OriginalColor)));
             }
             for (let i = 0; i < 10; i += 1) {
-                const exitPortalObject = new _exit__WEBPACK_IMPORTED_MODULE_7__["ExitPortal"](new _lavacanvas__WEBPACK_IMPORTED_MODULE_11__["Asset"]("/assets/resources/exitPortal.png", _lavacanvas__WEBPACK_IMPORTED_MODULE_11__["AssetColor"].OriginalColor, { x: 1, y: 2 }));
+                const exitPortalObject = new _exit__WEBPACK_IMPORTED_MODULE_6__["ExitPortal"](new _lavacanvas__WEBPACK_IMPORTED_MODULE_4__["Asset"]("/assets/resources/exitPortal.png", _lavacanvas__WEBPACK_IMPORTED_MODULE_4__["AssetColor"].OriginalColor, { x: 1, y: 2 }));
                 exitPortalObject.setHidden();
                 this.exitPortalsHidden.push(exitPortalObject);
             }
@@ -657,7 +682,7 @@ let LavaLandComponent = class LavaLandComponent {
                 ...this.exitPortalsHidden,
                 ...this.exitPortalsOpened
             ];
-            this.turnService.register(new _turnevent__WEBPACK_IMPORTED_MODULE_3__["TurnEventSubscription"](20, () => {
+            this.turnService.register(new _turnevent__WEBPACK_IMPORTED_MODULE_15__["TurnEventSubscription"](20, () => {
                 this.checkWispsCloseToRalph();
                 this.checkSpeedBoostsCloseToRalph();
                 this.checkSpeedBumpsCloseToRalph();
@@ -670,10 +695,10 @@ let LavaLandComponent = class LavaLandComponent {
             //
             // ***                                                ***
             //--------------------------------------------------------
-            this.turnService.register(new _turnevent__WEBPACK_IMPORTED_MODULE_3__["TurnEventSubscription"](1, event => {
+            this.turnService.register(new _turnevent__WEBPACK_IMPORTED_MODULE_15__["TurnEventSubscription"](1, event => {
                 // Update the time if game hasn't finished
-                if (this.gameState.getValue() !== _lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].CaughtAllWisps &&
-                    this.gameState.getValue() !== _lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].GotOutWithMinRequiredWisps) {
+                if (this.gameState.getValue() !== _lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].CaughtAllWisps &&
+                    this.gameState.getValue() !== _lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].GotOutWithMinRequiredWisps) {
                     this.secondsPassed = Math.round((new Date().getTime() - this.startTime.getTime()) / 1000);
                 }
                 else {
@@ -690,13 +715,13 @@ let LavaLandComponent = class LavaLandComponent {
             let previousState = this.gameState.getValue();
             this.gameState.subscribe((currentState) => {
                 switch (currentState) {
-                    case _lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].Started:
+                    case _lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].Started:
                         this.addNotification([
                             "Touch forest wisps to gather their power. Use it to open a portal out of lava land.",
                             "Brown mushrooms give you swiftness while red mushrooms sap your speed."
                         ]);
                         break;
-                    case _lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].CaughtMinRequiredWisps:
+                    case _lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].CaughtMinRequiredWisps:
                         if (previousState !== currentState) {
                             this.addNotification([
                                 "You have opened the portal in an unknown location!",
@@ -704,7 +729,7 @@ let LavaLandComponent = class LavaLandComponent {
                             ]);
                         }
                         break;
-                    case _lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].CaughtAllWisps:
+                    case _lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].CaughtAllWisps:
                         this.addNotification([
                             "Congratulations.",
                             "You have harnassed all the power of the lava land in " +
@@ -712,7 +737,7 @@ let LavaLandComponent = class LavaLandComponent {
                         ]);
                         this.gameOver("Wisps");
                         break;
-                    case _lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].GotOutWithMinRequiredWisps:
+                    case _lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].GotOutWithMinRequiredWisps:
                         this.addNotification([
                             "Congratulations.",
                             "You have successfully escaped the lava land in " +
@@ -730,7 +755,7 @@ let LavaLandComponent = class LavaLandComponent {
             //
             // ***                                                ***
             //--------------------------------------------------------
-            this.turnService.register(new _turnevent__WEBPACK_IMPORTED_MODULE_3__["TurnEventSubscription"](1, (_subscriptionEvent) => tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            this.turnService.register(new _turnevent__WEBPACK_IMPORTED_MODULE_15__["TurnEventSubscription"](1, (_subscriptionEvent) => tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
                 this.player.moveA();
             })));
             // this.playerSpeed.maxSpeed.subscribe((currentSpeed: number) => {
@@ -740,8 +765,8 @@ let LavaLandComponent = class LavaLandComponent {
             //   }
             // });
             // Start the game!
-            this.gameState.next(_lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].Started);
-            if (Object(_isDebug__WEBPACK_IMPORTED_MODULE_16__["isDebug"])()) {
+            this.gameState.next(_lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].Started);
+            if (Object(_isDebug__WEBPACK_IMPORTED_MODULE_7__["isDebug"])()) {
                 this.gameOver("Debug");
             }
         });
@@ -752,8 +777,8 @@ let LavaLandComponent = class LavaLandComponent {
     startGame() {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () { });
     }
-    addObjectToMap(TConstructor, url, assetColor = _lavacanvas__WEBPACK_IMPORTED_MODULE_11__["AssetColor"].OriginalColor, displaySize = { x: 1, y: 1 }) {
-        return new TConstructor(new _lavacanvas__WEBPACK_IMPORTED_MODULE_11__["Asset"](url, assetColor, displaySize));
+    addObjectToMap(TConstructor, url, assetColor = _lavacanvas__WEBPACK_IMPORTED_MODULE_4__["AssetColor"].OriginalColor, displaySize = { x: 1, y: 1 }) {
+        return new TConstructor(new _lavacanvas__WEBPACK_IMPORTED_MODULE_4__["Asset"](url, assetColor, displaySize));
     }
     checkSpeedBoostsCloseToRalph() {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
@@ -778,10 +803,10 @@ let LavaLandComponent = class LavaLandComponent {
     }
     checkExitPortalCloseToRalph() {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            if (this.gameState.getValue() === _lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].CaughtMinRequiredWisps) {
+            if (this.gameState.getValue() === _lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].CaughtMinRequiredWisps) {
                 for (let exitPortal of this.exitPortalsOpened) {
                     if ((yield exitPortal.checkIfCouldTouch(yield this.player.getCoordinate(), 1, 1)) === true) {
-                        this.gameState.next(_lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].GotOutWithMinRequiredWisps);
+                        this.gameState.next(_lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].GotOutWithMinRequiredWisps);
                     }
                 }
             }
@@ -801,16 +826,16 @@ let LavaLandComponent = class LavaLandComponent {
     }
     caughtWisp(wisp) {
         if (wisp.performCatch()) {
-            if (this.gameState.getValue() === _lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].Started) {
-                this.gameState.next(_lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].CaughtWisp);
+            if (this.gameState.getValue() === _lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].Started) {
+                this.gameState.next(_lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].CaughtWisp);
             }
             this.numberOfWispsCaught += 1;
-            if (Object(_isDebug__WEBPACK_IMPORTED_MODULE_16__["isDebug"])()) {
+            if (Object(_isDebug__WEBPACK_IMPORTED_MODULE_7__["isDebug"])()) {
                 if (this.numberOfWispsCaught > 1) {
-                    this.gameState.next(_lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].CaughtAllWisps);
+                    this.gameState.next(_lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].CaughtAllWisps);
                 }
-                else {
-                    this.gameState.next(_lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].CaughtMinRequiredWisps);
+                else if (true) {
+                    this.gameState.next(_lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].CaughtMinRequiredWisps);
                     for (let i = 0; i < 5; i += 1) {
                         const exitPortal = this.exitPortalsHidden.pop();
                         exitPortal.setShown();
@@ -819,10 +844,10 @@ let LavaLandComponent = class LavaLandComponent {
                 }
             }
             else if (this.numberOfWispsCaught === this.mapWisps.length) {
-                this.gameState.next(_lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].CaughtAllWisps);
+                this.gameState.next(_lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].CaughtAllWisps);
             }
             else if (this.numberOfWispsCaught > 0.6 * this.mapWisps.length) {
-                this.gameState.next(_lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].CaughtMinRequiredWisps);
+                this.gameState.next(_lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].CaughtMinRequiredWisps);
                 const exitPortal = this.exitPortalsHidden.pop();
                 exitPortal.setShown();
                 this.exitPortalsOpened.push(exitPortal);
@@ -831,7 +856,7 @@ let LavaLandComponent = class LavaLandComponent {
         if (this.playerInfluenceRadius < 5) {
             const newInfluenceRadius = Math.floor(100 * Math.min(this.playerInfluenceRadius * 1.1, 5)) / 100;
             const diff = newInfluenceRadius - this.playerInfluenceRadius;
-            this.turnService.register(new _turnevent__WEBPACK_IMPORTED_MODULE_3__["TurnEventSubscription"](1000, sub => {
+            this.turnService.register(new _turnevent__WEBPACK_IMPORTED_MODULE_15__["TurnEventSubscription"](1000, sub => {
                 sub.unsubscribe();
                 if (this.playerInfluenceRadius >= 1) {
                     this.playerInfluenceRadius -= diff;
@@ -846,7 +871,7 @@ let LavaLandComponent = class LavaLandComponent {
     addNotification(texts) {
         if (texts.length > 0) {
             this.notificationText.push(...texts);
-            this.turnService.register(new _turnevent__WEBPACK_IMPORTED_MODULE_3__["TurnEventSubscription"](1000, event => {
+            this.turnService.register(new _turnevent__WEBPACK_IMPORTED_MODULE_15__["TurnEventSubscription"](1000, event => {
                 const i = this.notificationText.indexOf(texts[0]);
                 this.notificationText.splice(i, texts.length);
                 event.unsubscribe();
@@ -858,19 +883,19 @@ let LavaLandComponent = class LavaLandComponent {
         if (finishMethod !== "Debug") {
             this.player.playerSpeed.stop();
         }
-        const dialogRef = this.dialog.open(_lava_game_finish_lava_game_finish_component__WEBPACK_IMPORTED_MODULE_14__["LavaGameFinishComponent"], { width: "600px", data: { name, time: this.secondsPassed } });
+        const dialogRef = this.dialog.open(_lava_game_finish_lava_game_finish_component__WEBPACK_IMPORTED_MODULE_8__["LavaGameFinishComponent"], { width: "600px", data: { name, time: this.secondsPassed } });
         dialogRef.afterClosed().subscribe(name => {
             this.backendService.gameOver(name, this.secondsPassed, finishMethod);
         });
     }
     showLeaderboard(leaderboard) {
-        const dialogRef = this.dialog.open(_lava_leaderboard_lava_leaderboard_component__WEBPACK_IMPORTED_MODULE_15__["LavaLeaderboardComponent"], { width: "600px", data: leaderboard });
+        const dialogRef = this.dialog.open(_lava_leaderboard_lava_leaderboard_component__WEBPACK_IMPORTED_MODULE_9__["LavaLeaderboardComponent"], { width: "600px", data: leaderboard });
     }
 };
 LavaLandComponent.ctorParameters = () => [
-    { type: _turn_service__WEBPACK_IMPORTED_MODULE_2__["TurnService"] },
-    { type: _backend_service__WEBPACK_IMPORTED_MODULE_10__["BackendService"] },
-    { type: _node_modules_angular_material__WEBPACK_IMPORTED_MODULE_13__["MatDialog"] }
+    { type: _turn_service__WEBPACK_IMPORTED_MODULE_14__["TurnService"] },
+    { type: _backend_service__WEBPACK_IMPORTED_MODULE_5__["BackendService"] },
+    { type: _node_modules_angular_material__WEBPACK_IMPORTED_MODULE_3__["MatDialog"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])("canvasContainer", { read: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], static: false })
@@ -974,28 +999,31 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BackendService", function() { return BackendService; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _lavalandcommon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../lavalandcommon */ "../lavalandcommon/index.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-/* harmony import */ var _isDebug__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./isDebug */ "./src/app/isDebug.ts");
+/* harmony import */ var _lavalandcommon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../lavalandcommon */ "../lavalandcommon/index.ts");
+/* harmony import */ var _isDebug__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./isDebug */ "./src/app/isDebug.ts");
+
 
 
 
 
 
 const devModeApiPaths = {
-    [_lavalandcommon__WEBPACK_IMPORTED_MODULE_2__["ClientMessageReasons"].GameSessionRequest]: "http://localhost:8080/api/gamesession/",
-    [_lavalandcommon__WEBPACK_IMPORTED_MODULE_2__["ClientMessageReasons"].LeaderboardRequest]: "http://localhost:8080/api/leaderboard/",
-    [_lavalandcommon__WEBPACK_IMPORTED_MODULE_2__["ClientMessageReasons"].MapFinished]: "http://localhost:8080/api/mapfinished/",
+    [_lavalandcommon__WEBPACK_IMPORTED_MODULE_4__["ClientMessageReasons"].GameSessionRequest]: "http://localhost:8080/api/gamesession/",
+    [_lavalandcommon__WEBPACK_IMPORTED_MODULE_4__["ClientMessageReasons"].LeaderboardRequest]: "http://localhost:8080/api/leaderboard/",
+    [_lavalandcommon__WEBPACK_IMPORTED_MODULE_4__["ClientMessageReasons"].MapFinished]: "http://localhost:8080/api/mapfinished/",
 };
 const productionApiPaths = {
-    [_lavalandcommon__WEBPACK_IMPORTED_MODULE_2__["ClientMessageReasons"].GameSessionRequest]: "/api/gamesession/",
-    [_lavalandcommon__WEBPACK_IMPORTED_MODULE_2__["ClientMessageReasons"].LeaderboardRequest]: "/api/leaderboard/",
-    [_lavalandcommon__WEBPACK_IMPORTED_MODULE_2__["ClientMessageReasons"].MapFinished]: "/api/mapfinished/",
+    [_lavalandcommon__WEBPACK_IMPORTED_MODULE_4__["ClientMessageReasons"].GameSessionRequest]: "/api/gamesession/",
+    [_lavalandcommon__WEBPACK_IMPORTED_MODULE_4__["ClientMessageReasons"].LeaderboardRequest]: "/api/leaderboard/",
+    [_lavalandcommon__WEBPACK_IMPORTED_MODULE_4__["ClientMessageReasons"].MapFinished]: "/api/mapfinished/",
 };
-const apiPaths = Object(_isDebug__WEBPACK_IMPORTED_MODULE_4__["isDebug"])() ? devModeApiPaths : productionApiPaths;
+const apiPaths = Object(_isDebug__WEBPACK_IMPORTED_MODULE_5__["isDebug"])() ? devModeApiPaths : productionApiPaths;
 let BackendService = class BackendService {
-    constructor() {
+    constructor(http) {
+        this.http = http;
         this.gameId = null;
         this.map = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
         this.leaderboard = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
@@ -1005,8 +1033,9 @@ let BackendService = class BackendService {
     }
     initGameSession() {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            const response = yield fetch(apiPaths[_lavalandcommon__WEBPACK_IMPORTED_MODULE_2__["ClientMessageReasons"].GameSessionRequest]);
+            const response = yield fetch(apiPaths[_lavalandcommon__WEBPACK_IMPORTED_MODULE_4__["ClientMessageReasons"].GameSessionRequest]);
             const gameSessionRequestResponse = yield response.json();
+            console.log('initGameSession', gameSessionRequestResponse);
             this.gameId = gameSessionRequestResponse.gameId;
             this.map.next(gameSessionRequestResponse.gameMap);
         });
@@ -1019,17 +1048,17 @@ let BackendService = class BackendService {
                 gameId: this.gameId,
                 name
             };
-            const response = yield fetch(apiPaths[_lavalandcommon__WEBPACK_IMPORTED_MODULE_2__["ClientMessageReasons"].MapFinished], {
-                method: 'post',
-                body: JSON.stringify(mapFinishedRequest)
-            });
-            const mapFinishedResponse = yield response.json();
+            console.log(mapFinishedRequest);
+            const mapFinishedResponse = yield this.http.post(apiPaths[_lavalandcommon__WEBPACK_IMPORTED_MODULE_4__["ClientMessageReasons"].MapFinished], mapFinishedRequest).toPromise();
             this.leaderboard.next(mapFinishedResponse.leaderboard);
         });
     }
 };
+BackendService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+];
 BackendService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])()
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])()
 ], BackendService);
 
 
@@ -2784,7 +2813,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Projects\workspace\lavaland\lavaland-gui\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! D:\code\lavaland\lavaland-gui\src\main.ts */"./src/main.ts");
 
 
 /***/ })

@@ -14,12 +14,13 @@ const mapGenerator_1 = require("../../mapGenerator");
 const gameinstance_1 = require("../../../lavalandcommon/gameinstance");
 function requestGameSession() {
     const route = express_1.Router();
-    route.get("/gamesession/*", (req, res) => __awaiter(this, void 0, void 0, function* () {
+    route.get("/gamesession", (req, res) => __awaiter(this, void 0, void 0, function* () {
         // const message: GameSessionRequest = req.body;
         const mapGenerator = new mapGenerator_1.MapGenerator(200, 100);
         // instance.browserLogger.info("Game session request");
         const gameInstance = new gameinstance_1.GameInstance(mapGenerator.getMap());
         const gameId = gameInstance.id;
+        console.log(gameInstance, gameId);
         const messageResponse = {
             gameId,
             gameMap: gameInstance.map,

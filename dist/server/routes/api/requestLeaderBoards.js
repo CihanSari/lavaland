@@ -13,7 +13,7 @@ const lavalandcommon_1 = require("../../../lavalandcommon");
 const db_1 = require("../../db");
 function requestLeaderBoardsRoute() {
     const route = express_1.Router();
-    route.get("/leaderboard/*", (req, res) => __awaiter(this, void 0, void 0, function* () {
+    route.get("/leaderboard", (req, res) => __awaiter(this, void 0, void 0, function* () {
         const message = req.body;
         const leaderboard = yield db_1.getLavalandDatabase().getGames(message.finishMethod);
         const messageResponse = {
@@ -22,7 +22,7 @@ function requestLeaderBoardsRoute() {
             leaderboard,
             duration: 0 //remove later
         };
-        res.send(messageResponse);
+        res.status(200).send(messageResponse);
     }));
     return route;
 }

@@ -1,12 +1,11 @@
 import { GameMap } from ".";
-import uuid = require("uuid");
+import { v4 as uuidv4 } from 'uuid';
 
 export class GameInstance {
-  readonly id = uuid();
+  readonly id = uuidv4();
   public onclose: Function = () => { };
   constructor(readonly map: GameMap) { }
   public gameSessionSent = false;
-  public mapSent = false;
   public container: Record<string, any> = {};
 }
 

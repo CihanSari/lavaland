@@ -1,20 +1,30 @@
-function _possibleConstructorReturn(self, call) { if (call && (typeof call === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+function _possibleConstructorReturn(self, call) { if (call && (typeof call === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -213,9 +223,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /*! tslib */
     "./node_modules/tslib/tslib.es6.js");
 
-    var Neighbors =
-    /*#__PURE__*/
-    function () {
+    var Neighbors = /*#__PURE__*/function () {
       function Neighbors(north, northEast, east, southEast, south, southWest, west, northWest) {
         _classCallCheck(this, Neighbors);
 
@@ -354,7 +362,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<lavaheader class=\"header lavatextFields\"></lavaheader>\n\n<lavastatistics class=\"statistics lavatextFields\" [remainingWisps]=\"totalNumberOfWisps-numberOfWispsCaught\" [currentSpeed]=\"player.currentSpeed\"\n  [currentRadius]=\"currentRadius()\" [numberOfSeconds]=\"secondsPassed\"></lavastatistics>\n<lavaCanvas class=\"fullScreen\" [settings]=\"mapSettings\" [player]=\"player\" [objects]=\"objects\" (mapDragRequest)=\"currentPlayerMovementRequest($event)\"></lavaCanvas>\n<lavanotification class=\"notification lavatextFields\" *ngIf=\"notificationText.length>0\" [notificationText]=\"notificationText\"></lavanotification>\n";
+    __webpack_exports__["default"] = "<lavaheader class=\"header lavatextFields\"></lavaheader>\r\n\r\n<lavastatistics class=\"statistics lavatextFields\" [remainingWisps]=\"totalNumberOfWisps-numberOfWispsCaught\" [currentSpeed]=\"player.currentSpeed\"\r\n  [currentRadius]=\"currentRadius()\" [numberOfSeconds]=\"secondsPassed\"></lavastatistics>\r\n<lavaCanvas class=\"fullScreen\" [settings]=\"mapSettings\" [player]=\"player\" [objects]=\"objects\" (mapDragRequest)=\"currentPlayerMovementRequest($event)\"></lavaCanvas>\r\n<lavanotification class=\"notification lavatextFields\" *ngIf=\"notificationText.length>0\" [notificationText]=\"notificationText\"></lavanotification>\r\n";
     /***/
   },
 
@@ -374,7 +382,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<h1 mat-dialog-title>Congratulations</h1>\n<div mat-dialog-content>\n  <h3>You have won in {{data.time}} seconds!</h3>\n  <h3>Enter name for leaderboard?</h3>\n  <mat-form-field>\n    <input #nameField matInput [(ngModel)]=\"data.name\" placeholder=\"Name\" pattern=\"[A-Za-z0-9]{3,}\" (input)=\"checkName()\" required>\n  </mat-form-field>\n  <p *ngIf=\"invalidName\">At least three English characters.</p>\n</div>\n<div mat-dialog-actions>\n  <button mat-flat-button color=\"warn\" (click)=\"onNoClick()\">No Thanks</button>\n  <button mat-flat-button [disabled]=\"invalidName\" cdkFocusInitial (click)=\"ok()\">Ok</button>\n</div>\n";
+    __webpack_exports__["default"] = "<h1 mat-dialog-title>Congratulations</h1>\r\n<div mat-dialog-content>\r\n  <h3>You have won in {{data.time}} seconds!</h3>\r\n  <h3>Enter name for leaderboard?</h3>\r\n  <mat-form-field>\r\n    <input #nameField matInput [(ngModel)]=\"data.name\" placeholder=\"Name\" pattern=\"[A-Za-z0-9]{3,}\" (input)=\"checkName()\" required>\r\n  </mat-form-field>\r\n  <p *ngIf=\"invalidName\">At least three English characters.</p>\r\n</div>\r\n<div mat-dialog-actions>\r\n  <button mat-flat-button color=\"warn\" (click)=\"onNoClick()\">No Thanks</button>\r\n  <button mat-flat-button [disabled]=\"invalidName\" cdkFocusInitial (click)=\"ok()\">Ok</button>\r\n</div>\r\n";
     /***/
   },
 
@@ -394,7 +402,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<h1>Lava Land</h1>\n";
+    __webpack_exports__["default"] = "<h1>Lava Land</h1>\r\n";
     /***/
   },
 
@@ -414,7 +422,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<h1 mat-dialog-title>Leaderboards</h1>\n<ol>\n  <li *ngFor=\"let entry of data\">\n    {{entry.name}} ({{entry.duration}} seconds)\n  </li>\n</ol>\n";
+    __webpack_exports__["default"] = "<h1 mat-dialog-title>Leaderboards</h1>\r\n<ol>\r\n  <li *ngFor=\"let entry of data\">\r\n    {{entry.name}} ({{entry.duration}} seconds)\r\n  </li>\r\n</ol>\r\n";
     /***/
   },
 
@@ -434,7 +442,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<p *ngFor=\"let text of notificationText\">{{text}}</p>\n";
+    __webpack_exports__["default"] = "<p *ngFor=\"let text of notificationText\">{{text}}</p>\r\n";
     /***/
   },
 
@@ -454,7 +462,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"sidenav\">\n  <table>\n    <tr>\n      <td class=\"title\">Remaining</td>\n      <td class=\"value\">{{remainingWisps}}</td>\n    </tr>\n    <tr>\n      <td class=\"title\">Time</td>\n      <td class=\"value\">{{numberOfSeconds}}s</td>\n    </tr>\n    <tr>\n      <td class=\"title\">Speed</td>\n      <td class=\"value\">{{currentSpeed}}%</td>\n    </tr>\n    <tr>\n      <td class=\"title\">Power</td>\n      <td class=\"value\">{{currentRadius}}</td>\n    </tr>\n  </table>\n</div>\n";
+    __webpack_exports__["default"] = "<div class=\"sidenav\">\r\n  <table>\r\n    <tr>\r\n      <td class=\"title\">Remaining</td>\r\n      <td class=\"value\">{{remainingWisps}}</td>\r\n    </tr>\r\n    <tr>\r\n      <td class=\"title\">Time</td>\r\n      <td class=\"value\">{{numberOfSeconds}}s</td>\r\n    </tr>\r\n    <tr>\r\n      <td class=\"title\">Speed</td>\r\n      <td class=\"value\">{{currentSpeed}}%</td>\r\n    </tr>\r\n    <tr>\r\n      <td class=\"title\">Power</td>\r\n      <td class=\"value\">{{currentRadius}}</td>\r\n    </tr>\r\n  </table>\r\n</div>\r\n";
     /***/
   },
 
@@ -464,7 +472,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     !*** ./node_modules/tslib/tslib.es6.js ***!
     \*****************************************/
 
-  /*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __exportStar, __values, __read, __spread, __spreadArrays, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault */
+  /*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __createBinding, __exportStar, __values, __read, __spread, __spreadArrays, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault, __classPrivateFieldGet, __classPrivateFieldSet */
 
   /***/
   function node_modulesTslibTslibEs6Js(module, __webpack_exports__, __webpack_require__) {
@@ -518,6 +526,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
     __webpack_require__.d(__webpack_exports__, "__generator", function () {
       return __generator;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__createBinding", function () {
+      return __createBinding;
     });
     /* harmony export (binding) */
 
@@ -591,19 +605,31 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     __webpack_require__.d(__webpack_exports__, "__importDefault", function () {
       return __importDefault;
     });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__classPrivateFieldGet", function () {
+      return __classPrivateFieldGet;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__classPrivateFieldSet", function () {
+      return __classPrivateFieldSet;
+    });
     /*! *****************************************************************************
-    Copyright (c) Microsoft Corporation. All rights reserved.
-    Licensed under the Apache License, Version 2.0 (the "License"); you may not use
-    this file except in compliance with the License. You may obtain a copy of the
-    License at http://www.apache.org/licenses/LICENSE-2.0
+    Copyright (c) Microsoft Corporation.
     
-    THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-    KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
-    WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
-    MERCHANTABLITY OR NON-INFRINGEMENT.
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted.
     
-    See the Apache Version 2.0 License for specific language governing permissions
-    and limitations under the License.
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+    REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+    AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+    INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+    LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+    OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+    PERFORMANCE OF THIS SOFTWARE.
     ***************************************************************************** */
 
     /* global Reflect, Promise */
@@ -683,6 +709,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     }
 
     function __awaiter(thisArg, _arguments, P, generator) {
+      function adopt(value) {
+        return value instanceof P ? value : new P(function (resolve) {
+          resolve(value);
+        });
+      }
+
       return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) {
           try {
@@ -701,9 +733,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }
 
         function step(result) {
-          result.done ? resolve(result.value) : new P(function (resolve) {
-            resolve(result.value);
-          }).then(fulfilled, rejected);
+          result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
         }
 
         step((generator = generator.apply(thisArg, _arguments || [])).next());
@@ -821,17 +851,23 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }
     }
 
+    function __createBinding(o, m, k, k2) {
+      if (k2 === undefined) k2 = k;
+      o[k2] = m[k];
+    }
+
     function __exportStar(m, exports) {
       for (var p in m) {
-        if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+        if (p !== "default" && !exports.hasOwnProperty(p)) exports[p] = m[p];
       }
     }
 
     function __values(o) {
-      var m = typeof Symbol === "function" && o[Symbol.iterator],
+      var s = typeof Symbol === "function" && Symbol.iterator,
+          m = s && o[s],
           i = 0;
       if (m) return m.call(o);
-      return {
+      if (o && typeof o.length === "number") return {
         next: function next() {
           if (o && i >= o.length) o = void 0;
           return {
@@ -840,6 +876,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           };
         }
       };
+      throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
     }
 
     function __read(o, n) {
@@ -1003,14 +1040,31 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       if (mod != null) for (var k in mod) {
         if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
       }
-      result.default = mod;
+      result["default"] = mod;
       return result;
     }
 
     function __importDefault(mod) {
       return mod && mod.__esModule ? mod : {
-        default: mod
+        "default": mod
       };
+    }
+
+    function __classPrivateFieldGet(receiver, privateMap) {
+      if (!privateMap.has(receiver)) {
+        throw new TypeError("attempted to get private field on non-instance");
+      }
+
+      return privateMap.get(receiver);
+    }
+
+    function __classPrivateFieldSet(receiver, privateMap, value) {
+      if (!privateMap.has(receiver)) {
+        throw new TypeError("attempted to set private field on non-instance");
+      }
+
+      privateMap.set(receiver, value);
+      return value;
     }
     /***/
 
@@ -1032,7 +1086,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "@import url(//fonts.googleapis.com/css?family=Caveat);\r\nbody {\r\n  color: rgb(212, 0, 212);\r\n  text-shadow: 2px 2px rgb(0, 0, 0);\r\n  font-family: \"Caveat\", cursive;\r\n}\r\n.header {\r\n  position: fixed;\r\n  z-index: 1;\r\n  top: 0;\r\n  left: 35%;\r\n  right: 35%;\r\n}\r\n.statistics {\r\n  position: fixed;\r\n  z-index: 1;\r\n  bottom: 0;\r\n  left: 0;\r\n}\r\n.notification {\r\n  position: fixed;\r\n  z-index: 1;\r\n  bottom: 0;\r\n  left: 20%;\r\n  right: 20%;\r\n}\r\n.lavatextFields {\r\n  pointer-events: none;\r\n  -webkit-user-select: none;\r\n     -moz-user-select: none;\r\n      -ms-user-select: none;\r\n          user-select: none;\r\n}\r\n.fullScreen {\r\n  width: 100%;\r\n  height: 100%;\r\n  position: absolute;\r\n  display: -webkit-box;\r\n  display: flex;\r\n  left: 0;\r\n  top: 0;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEscURBQXFEO0FBQ3JEO0VBQ0UsdUJBQXVCO0VBQ3ZCLGlDQUFpQztFQUNqQyw4QkFBOEI7QUFDaEM7QUFFQTtFQUNFLGVBQWU7RUFDZixVQUFVO0VBQ1YsTUFBTTtFQUNOLFNBQVM7RUFDVCxVQUFVO0FBQ1o7QUFFQTtFQUNFLGVBQWU7RUFDZixVQUFVO0VBQ1YsU0FBUztFQUNULE9BQU87QUFDVDtBQUVBO0VBQ0UsZUFBZTtFQUNmLFVBQVU7RUFDVixTQUFTO0VBQ1QsU0FBUztFQUNULFVBQVU7QUFDWjtBQUVBO0VBQ0Usb0JBQW9CO0VBQ3BCLHlCQUFpQjtLQUFqQixzQkFBaUI7TUFBakIscUJBQWlCO1VBQWpCLGlCQUFpQjtBQUNuQjtBQUVBO0VBQ0UsV0FBVztFQUNYLFlBQVk7RUFDWixrQkFBa0I7RUFDbEIsb0JBQWE7RUFBYixhQUFhO0VBQ2IsT0FBTztFQUNQLE1BQU07QUFDUiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCB1cmwoLy9mb250cy5nb29nbGVhcGlzLmNvbS9jc3M/ZmFtaWx5PUNhdmVhdCk7XHJcbmJvZHkge1xyXG4gIGNvbG9yOiByZ2IoMjEyLCAwLCAyMTIpO1xyXG4gIHRleHQtc2hhZG93OiAycHggMnB4IHJnYigwLCAwLCAwKTtcclxuICBmb250LWZhbWlseTogXCJDYXZlYXRcIiwgY3Vyc2l2ZTtcclxufVxyXG5cclxuLmhlYWRlciB7XHJcbiAgcG9zaXRpb246IGZpeGVkO1xyXG4gIHotaW5kZXg6IDE7XHJcbiAgdG9wOiAwO1xyXG4gIGxlZnQ6IDM1JTtcclxuICByaWdodDogMzUlO1xyXG59XHJcblxyXG4uc3RhdGlzdGljcyB7XHJcbiAgcG9zaXRpb246IGZpeGVkO1xyXG4gIHotaW5kZXg6IDE7XHJcbiAgYm90dG9tOiAwO1xyXG4gIGxlZnQ6IDA7XHJcbn1cclxuXHJcbi5ub3RpZmljYXRpb24ge1xyXG4gIHBvc2l0aW9uOiBmaXhlZDtcclxuICB6LWluZGV4OiAxO1xyXG4gIGJvdHRvbTogMDtcclxuICBsZWZ0OiAyMCU7XHJcbiAgcmlnaHQ6IDIwJTtcclxufVxyXG5cclxuLmxhdmF0ZXh0RmllbGRzIHtcclxuICBwb2ludGVyLWV2ZW50czogbm9uZTtcclxuICB1c2VyLXNlbGVjdDogbm9uZTtcclxufVxyXG5cclxuLmZ1bGxTY3JlZW4ge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGhlaWdodDogMTAwJTtcclxuICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBsZWZ0OiAwO1xyXG4gIHRvcDogMDtcclxufVxyXG4iXX0= */";
+    __webpack_exports__["default"] = "@import url(//fonts.googleapis.com/css?family=Caveat);\r\nbody {\r\n  color: rgb(212, 0, 212);\r\n  text-shadow: 2px 2px rgb(0, 0, 0);\r\n  font-family: \"Caveat\", cursive;\r\n}\r\n.header {\r\n  position: fixed;\r\n  z-index: 1;\r\n  top: 0;\r\n  left: 35%;\r\n  right: 35%;\r\n}\r\n.statistics {\r\n  position: fixed;\r\n  z-index: 1;\r\n  bottom: 0;\r\n  left: 0;\r\n}\r\n.notification {\r\n  position: fixed;\r\n  z-index: 1;\r\n  bottom: 0;\r\n  left: 20%;\r\n  right: 20%;\r\n}\r\n.lavatextFields {\r\n  pointer-events: none;\r\n  -webkit-user-select: none;\r\n     -moz-user-select: none;\r\n      -ms-user-select: none;\r\n          user-select: none;\r\n}\r\n.fullScreen {\r\n  width: 100%;\r\n  height: 100%;\r\n  position: absolute;\r\n  display: flex;\r\n  left: 0;\r\n  top: 0;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEscURBQXFEO0FBQ3JEO0VBQ0UsdUJBQXVCO0VBQ3ZCLGlDQUFpQztFQUNqQyw4QkFBOEI7QUFDaEM7QUFFQTtFQUNFLGVBQWU7RUFDZixVQUFVO0VBQ1YsTUFBTTtFQUNOLFNBQVM7RUFDVCxVQUFVO0FBQ1o7QUFFQTtFQUNFLGVBQWU7RUFDZixVQUFVO0VBQ1YsU0FBUztFQUNULE9BQU87QUFDVDtBQUVBO0VBQ0UsZUFBZTtFQUNmLFVBQVU7RUFDVixTQUFTO0VBQ1QsU0FBUztFQUNULFVBQVU7QUFDWjtBQUVBO0VBQ0Usb0JBQW9CO0VBQ3BCLHlCQUFpQjtLQUFqQixzQkFBaUI7TUFBakIscUJBQWlCO1VBQWpCLGlCQUFpQjtBQUNuQjtBQUVBO0VBQ0UsV0FBVztFQUNYLFlBQVk7RUFDWixrQkFBa0I7RUFDbEIsYUFBYTtFQUNiLE9BQU87RUFDUCxNQUFNO0FBQ1IiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgdXJsKC8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzP2ZhbWlseT1DYXZlYXQpO1xyXG5ib2R5IHtcclxuICBjb2xvcjogcmdiKDIxMiwgMCwgMjEyKTtcclxuICB0ZXh0LXNoYWRvdzogMnB4IDJweCByZ2IoMCwgMCwgMCk7XHJcbiAgZm9udC1mYW1pbHk6IFwiQ2F2ZWF0XCIsIGN1cnNpdmU7XHJcbn1cclxuXHJcbi5oZWFkZXIge1xyXG4gIHBvc2l0aW9uOiBmaXhlZDtcclxuICB6LWluZGV4OiAxO1xyXG4gIHRvcDogMDtcclxuICBsZWZ0OiAzNSU7XHJcbiAgcmlnaHQ6IDM1JTtcclxufVxyXG5cclxuLnN0YXRpc3RpY3Mge1xyXG4gIHBvc2l0aW9uOiBmaXhlZDtcclxuICB6LWluZGV4OiAxO1xyXG4gIGJvdHRvbTogMDtcclxuICBsZWZ0OiAwO1xyXG59XHJcblxyXG4ubm90aWZpY2F0aW9uIHtcclxuICBwb3NpdGlvbjogZml4ZWQ7XHJcbiAgei1pbmRleDogMTtcclxuICBib3R0b206IDA7XHJcbiAgbGVmdDogMjAlO1xyXG4gIHJpZ2h0OiAyMCU7XHJcbn1cclxuXHJcbi5sYXZhdGV4dEZpZWxkcyB7XHJcbiAgcG9pbnRlci1ldmVudHM6IG5vbmU7XHJcbiAgdXNlci1zZWxlY3Q6IG5vbmU7XHJcbn1cclxuXHJcbi5mdWxsU2NyZWVuIHtcclxuICB3aWR0aDogMTAwJTtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbiAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgbGVmdDogMDtcclxuICB0b3A6IDA7XHJcbn1cclxuIl19 */";
     /***/
   },
 
@@ -1070,97 +1124,95 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /* harmony import */
 
 
-    var _turn_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! ./turn.service */
-    "./src/app/turn.service.ts");
-    /* harmony import */
-
-
-    var _turnevent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! ./turnevent */
-    "./src/app/turnevent.ts");
-    /* harmony import */
-
-
-    var _wisp__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! ./wisp */
-    "./src/app/wisp.ts");
-    /* harmony import */
-
-
-    var _speedboost__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-    /*! ./speedboost */
-    "./src/app/speedboost.ts");
-    /* harmony import */
-
-
-    var _speedbump__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-    /*! ./speedbump */
-    "./src/app/speedbump.ts");
-    /* harmony import */
-
-
-    var _exit__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-    /*! ./exit */
-    "./src/app/exit.ts");
-    /* harmony import */
-
-
-    var rxjs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! rxjs */
     "./node_modules/rxjs/_esm2015/index.js");
     /* harmony import */
 
 
-    var _lavastate__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
-    /*! ./lavastate */
-    "./src/app/lavastate.ts");
-    /* harmony import */
-
-
-    var _backend_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
-    /*! ./backend.service */
-    "./src/app/backend.service.ts");
-    /* harmony import */
-
-
-    var _lavacanvas__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
-    /*! ../lavacanvas */
-    "./src/lavacanvas/index.ts");
-    /* harmony import */
-
-
-    var _player__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
-    /*! ./player */
-    "./src/app/player.ts");
-    /* harmony import */
-
-
-    var _node_modules_angular_material__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+    var _node_modules_angular_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! ../../node_modules/@angular/material */
     "./node_modules/@angular/material/esm2015/material.js");
     /* harmony import */
 
 
-    var _lava_game_finish_lava_game_finish_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+    var _lavacanvas__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ../lavacanvas */
+    "./src/lavacanvas/index.ts");
+    /* harmony import */
+
+
+    var _backend_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ./backend.service */
+    "./src/app/backend.service.ts");
+    /* harmony import */
+
+
+    var _exit__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ./exit */
+    "./src/app/exit.ts");
+    /* harmony import */
+
+
+    var _isDebug__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! ./isDebug */
+    "./src/app/isDebug.ts");
+    /* harmony import */
+
+
+    var _lava_game_finish_lava_game_finish_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
     /*! ./lava-game-finish/lava-game-finish.component */
     "./src/app/lava-game-finish/lava-game-finish.component.ts");
     /* harmony import */
 
 
-    var _lava_leaderboard_lava_leaderboard_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+    var _lava_leaderboard_lava_leaderboard_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
     /*! ./lava-leaderboard/lava-leaderboard.component */
     "./src/app/lava-leaderboard/lava-leaderboard.component.ts");
     /* harmony import */
 
 
-    var _isDebug__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
-    /*! ./isDebug */
-    "./src/app/isDebug.ts");
+    var _lavastate__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    /*! ./lavastate */
+    "./src/app/lavastate.ts");
+    /* harmony import */
 
-    var LavaLandComponent =
-    /*#__PURE__*/
-    function () {
+
+    var _player__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    /*! ./player */
+    "./src/app/player.ts");
+    /* harmony import */
+
+
+    var _speedboost__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    /*! ./speedboost */
+    "./src/app/speedboost.ts");
+    /* harmony import */
+
+
+    var _speedbump__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+    /*! ./speedbump */
+    "./src/app/speedbump.ts");
+    /* harmony import */
+
+
+    var _turn_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+    /*! ./turn.service */
+    "./src/app/turn.service.ts");
+    /* harmony import */
+
+
+    var _turnevent__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+    /*! ./turnevent */
+    "./src/app/turnevent.ts");
+    /* harmony import */
+
+
+    var _wisp__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
+    /*! ./wisp */
+    "./src/app/wisp.ts");
+
+    var LavaLandComponent = /*#__PURE__*/function () {
       function LavaLandComponent(turnService, backendService, dialog) {
         _classCallCheck(this, LavaLandComponent);
 
@@ -1176,7 +1228,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         this.exitPortalsHidden = [];
         this.exitPortalsOpened = []; // This game's details
 
-        this.gameState = new rxjs__WEBPACK_IMPORTED_MODULE_8__["BehaviorSubject"](_lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].Starting);
+        this.gameState = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](_lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].Starting);
         this.startTime = new Date();
         this.secondsPassed = 0; // Player statistics
 
@@ -1185,7 +1237,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         this.playerInfluenceRadius = 1; // Notification text
 
         this.notificationText = [];
-        this.player = new _player__WEBPACK_IMPORTED_MODULE_12__["PlayerObject"](new _lavacanvas__WEBPACK_IMPORTED_MODULE_11__["Asset"]("/assets/characters/ralph.png", _lavacanvas__WEBPACK_IMPORTED_MODULE_11__["AssetColor"].OriginalColor, {
+        this.player = new _player__WEBPACK_IMPORTED_MODULE_11__["PlayerObject"](new _lavacanvas__WEBPACK_IMPORTED_MODULE_4__["Asset"]("/assets/characters/ralph.png", _lavacanvas__WEBPACK_IMPORTED_MODULE_4__["AssetColor"].OriginalColor, {
           x: 1,
           y: 2
         }));
@@ -1194,9 +1246,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       _createClass(LavaLandComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
             var _this = this;
 
             return regeneratorRuntime.wrap(function _callee$(_context) {
@@ -1213,12 +1263,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                     this.backendService.$map.subscribe(function (map) {
                       return _this.onMapReceived(map);
                     }, function (exception) {
-                      if (Object(_isDebug__WEBPACK_IMPORTED_MODULE_16__["isDebug"])()) {
+                      if (Object(_isDebug__WEBPACK_IMPORTED_MODULE_7__["isDebug"])()) {
                         console.warn("[LavaLandComponent] Map error!");
                         console.error(exception);
                       }
                     }, function () {
-                      if (Object(_isDebug__WEBPACK_IMPORTED_MODULE_16__["isDebug"])()) {
+                      if (Object(_isDebug__WEBPACK_IMPORTED_MODULE_7__["isDebug"])()) {
                         console.warn("[LavaLandComponent] Map subscription completed!");
                       }
                     });
@@ -1237,9 +1287,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "onMapReceived",
         value: function onMapReceived(map) {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee3() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
             var _this2 = this;
 
             var i, _i, _i2, _i3, exitPortalObject, previousState;
@@ -1256,7 +1304,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                     // ***                                                ***
                     //--------------------------------------------------------
                     this.mapSettings = {
-                      assets: [new _lavacanvas__WEBPACK_IMPORTED_MODULE_11__["Asset"]("/assets/maptiles/water.png"), new _lavacanvas__WEBPACK_IMPORTED_MODULE_11__["Asset"]("/assets/maptiles/land.png"), new _lavacanvas__WEBPACK_IMPORTED_MODULE_11__["Asset"]("/assets/maptiles/lava.png")],
+                      assets: [new _lavacanvas__WEBPACK_IMPORTED_MODULE_4__["Asset"]("/assets/maptiles/water.png"), new _lavacanvas__WEBPACK_IMPORTED_MODULE_4__["Asset"]("/assets/maptiles/land.png"), new _lavacanvas__WEBPACK_IMPORTED_MODULE_4__["Asset"]("/assets/maptiles/lava.png")],
                       map: map
                     }; //--------------------------------------------------------
                     // ***                                                ***
@@ -1267,22 +1315,22 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                     //--------------------------------------------------------
 
                     for (i = 0; i < this.totalNumberOfWisps; i += 1) {
-                      this.mapWisps.push(new _wisp__WEBPACK_IMPORTED_MODULE_4__["Wisp"](new _lavacanvas__WEBPACK_IMPORTED_MODULE_11__["Asset"]("/assets/characters/wisp.png", _lavacanvas__WEBPACK_IMPORTED_MODULE_11__["AssetColor"].RandomColor, {
+                      this.mapWisps.push(new _wisp__WEBPACK_IMPORTED_MODULE_16__["Wisp"](new _lavacanvas__WEBPACK_IMPORTED_MODULE_4__["Asset"]("/assets/characters/wisp.png", _lavacanvas__WEBPACK_IMPORTED_MODULE_4__["AssetColor"].RandomColor, {
                         x: 1,
                         y: 2
                       })));
                     }
 
                     for (_i = 0; _i < 20; _i += 1) {
-                      this.mapSpeedBoosters.push(new _speedboost__WEBPACK_IMPORTED_MODULE_5__["SpeedBoost"](new _lavacanvas__WEBPACK_IMPORTED_MODULE_11__["Asset"]("/assets/resources/GoodMushroom.png", _lavacanvas__WEBPACK_IMPORTED_MODULE_11__["AssetColor"].OriginalColor)));
+                      this.mapSpeedBoosters.push(new _speedboost__WEBPACK_IMPORTED_MODULE_12__["SpeedBoost"](new _lavacanvas__WEBPACK_IMPORTED_MODULE_4__["Asset"]("/assets/resources/GoodMushroom.png", _lavacanvas__WEBPACK_IMPORTED_MODULE_4__["AssetColor"].OriginalColor)));
                     }
 
                     for (_i2 = 0; _i2 < 10; _i2 += 1) {
-                      this.mapSpeedBumps.push(new _speedbump__WEBPACK_IMPORTED_MODULE_6__["SpeedBump"](new _lavacanvas__WEBPACK_IMPORTED_MODULE_11__["Asset"]("/assets/resources/RedMushroom.png", _lavacanvas__WEBPACK_IMPORTED_MODULE_11__["AssetColor"].OriginalColor)));
+                      this.mapSpeedBumps.push(new _speedbump__WEBPACK_IMPORTED_MODULE_13__["SpeedBump"](new _lavacanvas__WEBPACK_IMPORTED_MODULE_4__["Asset"]("/assets/resources/RedMushroom.png", _lavacanvas__WEBPACK_IMPORTED_MODULE_4__["AssetColor"].OriginalColor)));
                     }
 
                     for (_i3 = 0; _i3 < 10; _i3 += 1) {
-                      exitPortalObject = new _exit__WEBPACK_IMPORTED_MODULE_7__["ExitPortal"](new _lavacanvas__WEBPACK_IMPORTED_MODULE_11__["Asset"]("/assets/resources/exitPortal.png", _lavacanvas__WEBPACK_IMPORTED_MODULE_11__["AssetColor"].OriginalColor, {
+                      exitPortalObject = new _exit__WEBPACK_IMPORTED_MODULE_6__["ExitPortal"](new _lavacanvas__WEBPACK_IMPORTED_MODULE_4__["Asset"]("/assets/resources/exitPortal.png", _lavacanvas__WEBPACK_IMPORTED_MODULE_4__["AssetColor"].OriginalColor, {
                         x: 1,
                         y: 2
                       }));
@@ -1291,7 +1339,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                     }
 
                     this.objects = [].concat(_toConsumableArray(this.mapWisps), _toConsumableArray(this.mapSpeedBoosters), _toConsumableArray(this.mapSpeedBumps), _toConsumableArray(this.exitPortalsHidden), _toConsumableArray(this.exitPortalsOpened));
-                    this.turnService.register(new _turnevent__WEBPACK_IMPORTED_MODULE_3__["TurnEventSubscription"](20, function () {
+                    this.turnService.register(new _turnevent__WEBPACK_IMPORTED_MODULE_15__["TurnEventSubscription"](20, function () {
                       _this2.checkWispsCloseToRalph();
 
                       _this2.checkSpeedBoostsCloseToRalph();
@@ -1307,9 +1355,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                     // ***                                                ***
                     //--------------------------------------------------------
 
-                    this.turnService.register(new _turnevent__WEBPACK_IMPORTED_MODULE_3__["TurnEventSubscription"](1, function (event) {
+                    this.turnService.register(new _turnevent__WEBPACK_IMPORTED_MODULE_15__["TurnEventSubscription"](1, function (event) {
                       // Update the time if game hasn't finished
-                      if (_this2.gameState.getValue() !== _lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].CaughtAllWisps && _this2.gameState.getValue() !== _lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].GotOutWithMinRequiredWisps) {
+                      if (_this2.gameState.getValue() !== _lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].CaughtAllWisps && _this2.gameState.getValue() !== _lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].GotOutWithMinRequiredWisps) {
                         _this2.secondsPassed = Math.round((new Date().getTime() - _this2.startTime.getTime()) / 1000);
                       } else {
                         event.unsubscribe();
@@ -1325,26 +1373,26 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                     previousState = this.gameState.getValue();
                     this.gameState.subscribe(function (currentState) {
                       switch (currentState) {
-                        case _lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].Started:
+                        case _lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].Started:
                           _this2.addNotification(["Touch forest wisps to gather their power. Use it to open a portal out of lava land.", "Brown mushrooms give you swiftness while red mushrooms sap your speed."]);
 
                           break;
 
-                        case _lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].CaughtMinRequiredWisps:
+                        case _lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].CaughtMinRequiredWisps:
                           if (previousState !== currentState) {
                             _this2.addNotification(["You have opened the portal in an unknown location!", "Find it to escape the lava land."]);
                           }
 
                           break;
 
-                        case _lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].CaughtAllWisps:
+                        case _lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].CaughtAllWisps:
                           _this2.addNotification(["Congratulations.", "You have harnassed all the power of the lava land in " + _this2.secondsPassed + " seconds."]);
 
                           _this2.gameOver("Wisps");
 
                           break;
 
-                        case _lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].GotOutWithMinRequiredWisps:
+                        case _lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].GotOutWithMinRequiredWisps:
                           _this2.addNotification(["Congratulations.", "You have successfully escaped the lava land in " + _this2.secondsPassed + " seconds."]);
 
                           _this2.gameOver("Gate");
@@ -1361,10 +1409,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                     // ***                                                ***
                     //--------------------------------------------------------
 
-                    this.turnService.register(new _turnevent__WEBPACK_IMPORTED_MODULE_3__["TurnEventSubscription"](1, function (_subscriptionEvent) {
-                      return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this2, void 0, void 0,
-                      /*#__PURE__*/
-                      regeneratorRuntime.mark(function _callee2() {
+                    this.turnService.register(new _turnevent__WEBPACK_IMPORTED_MODULE_15__["TurnEventSubscription"](1, function (_subscriptionEvent) {
+                      return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this2, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
                         return regeneratorRuntime.wrap(function _callee2$(_context2) {
                           while (1) {
                             switch (_context2.prev = _context2.next) {
@@ -1386,9 +1432,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                     // });
                     // Start the game!
 
-                    this.gameState.next(_lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].Started);
+                    this.gameState.next(_lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].Started);
 
-                    if (Object(_isDebug__WEBPACK_IMPORTED_MODULE_16__["isDebug"])()) {
+                    if (Object(_isDebug__WEBPACK_IMPORTED_MODULE_7__["isDebug"])()) {
                       this.gameOver("Debug");
                     }
 
@@ -1408,9 +1454,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "startGame",
         value: function startGame() {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee4() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
             return regeneratorRuntime.wrap(function _callee4$(_context4) {
               while (1) {
                 switch (_context4.prev = _context4.next) {
@@ -1425,146 +1469,122 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "addObjectToMap",
         value: function addObjectToMap(TConstructor, url) {
-          var assetColor = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : _lavacanvas__WEBPACK_IMPORTED_MODULE_11__["AssetColor"].OriginalColor;
+          var assetColor = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : _lavacanvas__WEBPACK_IMPORTED_MODULE_4__["AssetColor"].OriginalColor;
           var displaySize = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {
             x: 1,
             y: 1
           };
-          return new TConstructor(new _lavacanvas__WEBPACK_IMPORTED_MODULE_11__["Asset"](url, assetColor, displaySize));
+          return new TConstructor(new _lavacanvas__WEBPACK_IMPORTED_MODULE_4__["Asset"](url, assetColor, displaySize));
         }
       }, {
         key: "checkSpeedBoostsCloseToRalph",
         value: function checkSpeedBoostsCloseToRalph() {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee5() {
-            var _iteratorNormalCompletion, _didIteratorError, _iteratorError, _iterator, _step, boost;
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee5() {
+            var _iterator, _step, boost;
 
             return regeneratorRuntime.wrap(function _callee5$(_context5) {
               while (1) {
                 switch (_context5.prev = _context5.next) {
                   case 0:
-                    _iteratorNormalCompletion = true;
-                    _didIteratorError = false;
-                    _iteratorError = undefined;
-                    _context5.prev = 3;
-                    _iterator = this.mapSpeedBoosters[Symbol.iterator]();
+                    _iterator = _createForOfIteratorHelper(this.mapSpeedBoosters);
+                    _context5.prev = 1;
 
-                  case 5:
-                    if (_iteratorNormalCompletion = (_step = _iterator.next()).done) {
-                      _context5.next = 22;
+                    _iterator.s();
+
+                  case 3:
+                    if ((_step = _iterator.n()).done) {
+                      _context5.next = 19;
                       break;
                     }
 
                     boost = _step.value;
                     _context5.t0 = boost;
-                    _context5.next = 10;
+                    _context5.next = 8;
                     return this.player.getCoordinate();
 
-                  case 10:
+                  case 8:
                     _context5.t1 = _context5.sent;
                     _context5.t2 = this.playerInfluenceRadius;
                     _context5.t3 = this.playerInfluenceRadius;
-                    _context5.next = 15;
+                    _context5.next = 13;
                     return _context5.t0.checkIfCouldTouch.call(_context5.t0, _context5.t1, _context5.t2, _context5.t3);
 
-                  case 15:
+                  case 13:
                     _context5.t4 = _context5.sent;
 
                     if (!(_context5.t4 === true)) {
-                      _context5.next = 19;
+                      _context5.next = 17;
                       break;
                     }
 
                     boost.performTouch();
                     this.player.playerSpeed.speedBoost();
 
-                  case 19:
-                    _iteratorNormalCompletion = true;
-                    _context5.next = 5;
+                  case 17:
+                    _context5.next = 3;
                     break;
 
-                  case 22:
-                    _context5.next = 28;
+                  case 19:
+                    _context5.next = 24;
                     break;
+
+                  case 21:
+                    _context5.prev = 21;
+                    _context5.t5 = _context5["catch"](1);
+
+                    _iterator.e(_context5.t5);
 
                   case 24:
                     _context5.prev = 24;
-                    _context5.t5 = _context5["catch"](3);
-                    _didIteratorError = true;
-                    _iteratorError = _context5.t5;
 
-                  case 28:
-                    _context5.prev = 28;
-                    _context5.prev = 29;
+                    _iterator.f();
 
-                    if (!_iteratorNormalCompletion && _iterator.return != null) {
-                      _iterator.return();
-                    }
+                    return _context5.finish(24);
 
-                  case 31:
-                    _context5.prev = 31;
-
-                    if (!_didIteratorError) {
-                      _context5.next = 34;
-                      break;
-                    }
-
-                    throw _iteratorError;
-
-                  case 34:
-                    return _context5.finish(31);
-
-                  case 35:
-                    return _context5.finish(28);
-
-                  case 36:
+                  case 27:
                   case "end":
                     return _context5.stop();
                 }
               }
-            }, _callee5, this, [[3, 24, 28, 36], [29,, 31, 35]]);
+            }, _callee5, this, [[1, 21, 24, 27]]);
           }));
         }
       }, {
         key: "checkSpeedBumpsCloseToRalph",
         value: function checkSpeedBumpsCloseToRalph() {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee6() {
-            var _iteratorNormalCompletion2, _didIteratorError2, _iteratorError2, _iterator2, _step2, speedBump;
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee6() {
+            var _iterator2, _step2, speedBump;
 
             return regeneratorRuntime.wrap(function _callee6$(_context6) {
               while (1) {
                 switch (_context6.prev = _context6.next) {
                   case 0:
-                    _iteratorNormalCompletion2 = true;
-                    _didIteratorError2 = false;
-                    _iteratorError2 = undefined;
-                    _context6.prev = 3;
-                    _iterator2 = this.mapSpeedBumps[Symbol.iterator]();
+                    _iterator2 = _createForOfIteratorHelper(this.mapSpeedBumps);
+                    _context6.prev = 1;
 
-                  case 5:
-                    if (_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done) {
-                      _context6.next = 20;
+                    _iterator2.s();
+
+                  case 3:
+                    if ((_step2 = _iterator2.n()).done) {
+                      _context6.next = 17;
                       break;
                     }
 
                     speedBump = _step2.value;
                     _context6.t0 = speedBump;
-                    _context6.next = 10;
+                    _context6.next = 8;
                     return this.player.getCoordinate();
 
-                  case 10:
+                  case 8:
                     _context6.t1 = _context6.sent;
-                    _context6.next = 13;
+                    _context6.next = 11;
                     return _context6.t0.checkIfCouldTouch.call(_context6.t0, _context6.t1, 1, 1);
 
-                  case 13:
+                  case 11:
                     _context6.t2 = _context6.sent;
 
                     if (!(_context6.t2 === true)) {
-                      _context6.next = 17;
+                      _context6.next = 15;
                       break;
                     }
 
@@ -1572,182 +1592,131 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                     speedBump.performTouch();
                     this.player.playerSpeed.speedBump();
 
-                  case 17:
-                    _iteratorNormalCompletion2 = true;
-                    _context6.next = 5;
+                  case 15:
+                    _context6.next = 3;
                     break;
 
-                  case 20:
-                    _context6.next = 26;
+                  case 17:
+                    _context6.next = 22;
                     break;
+
+                  case 19:
+                    _context6.prev = 19;
+                    _context6.t3 = _context6["catch"](1);
+
+                    _iterator2.e(_context6.t3);
 
                   case 22:
                     _context6.prev = 22;
-                    _context6.t3 = _context6["catch"](3);
-                    _didIteratorError2 = true;
-                    _iteratorError2 = _context6.t3;
 
-                  case 26:
-                    _context6.prev = 26;
-                    _context6.prev = 27;
+                    _iterator2.f();
 
-                    if (!_iteratorNormalCompletion2 && _iterator2.return != null) {
-                      _iterator2.return();
-                    }
+                    return _context6.finish(22);
 
-                  case 29:
-                    _context6.prev = 29;
-
-                    if (!_didIteratorError2) {
-                      _context6.next = 32;
-                      break;
-                    }
-
-                    throw _iteratorError2;
-
-                  case 32:
-                    return _context6.finish(29);
-
-                  case 33:
-                    return _context6.finish(26);
-
-                  case 34:
+                  case 25:
                   case "end":
                     return _context6.stop();
                 }
               }
-            }, _callee6, this, [[3, 22, 26, 34], [27,, 29, 33]]);
+            }, _callee6, this, [[1, 19, 22, 25]]);
           }));
         }
       }, {
         key: "checkExitPortalCloseToRalph",
         value: function checkExitPortalCloseToRalph() {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee7() {
-            var _iteratorNormalCompletion3, _didIteratorError3, _iteratorError3, _iterator3, _step3, exitPortal;
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee7() {
+            var _iterator3, _step3, exitPortal;
 
             return regeneratorRuntime.wrap(function _callee7$(_context7) {
               while (1) {
                 switch (_context7.prev = _context7.next) {
                   case 0:
-                    if (!(this.gameState.getValue() === _lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].CaughtMinRequiredWisps)) {
-                      _context7.next = 34;
+                    if (!(this.gameState.getValue() === _lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].CaughtMinRequiredWisps)) {
+                      _context7.next = 25;
                       break;
                     }
 
-                    _iteratorNormalCompletion3 = true;
-                    _didIteratorError3 = false;
-                    _iteratorError3 = undefined;
-                    _context7.prev = 4;
-                    _iterator3 = this.exitPortalsOpened[Symbol.iterator]();
+                    _iterator3 = _createForOfIteratorHelper(this.exitPortalsOpened);
+                    _context7.prev = 2;
 
-                  case 6:
-                    if (_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done) {
-                      _context7.next = 20;
+                    _iterator3.s();
+
+                  case 4:
+                    if ((_step3 = _iterator3.n()).done) {
+                      _context7.next = 17;
                       break;
                     }
 
                     exitPortal = _step3.value;
                     _context7.t0 = exitPortal;
-                    _context7.next = 11;
+                    _context7.next = 9;
                     return this.player.getCoordinate();
 
-                  case 11:
+                  case 9:
                     _context7.t1 = _context7.sent;
-                    _context7.next = 14;
+                    _context7.next = 12;
                     return _context7.t0.checkIfCouldTouch.call(_context7.t0, _context7.t1, 1, 1);
 
-                  case 14:
+                  case 12:
                     _context7.t2 = _context7.sent;
 
                     if (!(_context7.t2 === true)) {
-                      _context7.next = 17;
+                      _context7.next = 15;
                       break;
                     }
 
-                    this.gameState.next(_lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].GotOutWithMinRequiredWisps);
+                    this.gameState.next(_lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].GotOutWithMinRequiredWisps);
+
+                  case 15:
+                    _context7.next = 4;
+                    break;
 
                   case 17:
-                    _iteratorNormalCompletion3 = true;
-                    _context7.next = 6;
+                    _context7.next = 22;
                     break;
 
-                  case 20:
-                    _context7.next = 26;
-                    break;
+                  case 19:
+                    _context7.prev = 19;
+                    _context7.t3 = _context7["catch"](2);
+
+                    _iterator3.e(_context7.t3);
 
                   case 22:
                     _context7.prev = 22;
-                    _context7.t3 = _context7["catch"](4);
-                    _didIteratorError3 = true;
-                    _iteratorError3 = _context7.t3;
 
-                  case 26:
-                    _context7.prev = 26;
-                    _context7.prev = 27;
+                    _iterator3.f();
 
-                    if (!_iteratorNormalCompletion3 && _iterator3.return != null) {
-                      _iterator3.return();
-                    }
+                    return _context7.finish(22);
 
-                  case 29:
-                    _context7.prev = 29;
-
-                    if (!_didIteratorError3) {
-                      _context7.next = 32;
-                      break;
-                    }
-
-                    throw _iteratorError3;
-
-                  case 32:
-                    return _context7.finish(29);
-
-                  case 33:
-                    return _context7.finish(26);
-
-                  case 34:
+                  case 25:
                   case "end":
                     return _context7.stop();
                 }
               }
-            }, _callee7, this, [[4, 22, 26, 34], [27,, 29, 33]]);
+            }, _callee7, this, [[2, 19, 22, 25]]);
           }));
         }
       }, {
         key: "checkWispsCloseToRalph",
         value: function checkWispsCloseToRalph() {
-          var _iteratorNormalCompletion4 = true;
-          var _didIteratorError4 = false;
-          var _iteratorError4 = undefined;
+          var _iterator4 = _createForOfIteratorHelper(this.mapWisps),
+              _step4;
 
           try {
-            for (var _iterator4 = this.mapWisps[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+            for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
               var wisp = _step4.value;
               this.checkWispCloseToRalph(wisp);
             }
           } catch (err) {
-            _didIteratorError4 = true;
-            _iteratorError4 = err;
+            _iterator4.e(err);
           } finally {
-            try {
-              if (!_iteratorNormalCompletion4 && _iterator4.return != null) {
-                _iterator4.return();
-              }
-            } finally {
-              if (_didIteratorError4) {
-                throw _iteratorError4;
-              }
-            }
+            _iterator4.f();
           }
         }
       }, {
         key: "checkWispCloseToRalph",
         value: function checkWispCloseToRalph(wisp) {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee8() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee8() {
             return regeneratorRuntime.wrap(function _callee8$(_context8) {
               while (1) {
                 switch (_context8.prev = _context8.next) {
@@ -1779,17 +1748,17 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           var _this3 = this;
 
           if (wisp.performCatch()) {
-            if (this.gameState.getValue() === _lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].Started) {
-              this.gameState.next(_lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].CaughtWisp);
+            if (this.gameState.getValue() === _lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].Started) {
+              this.gameState.next(_lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].CaughtWisp);
             }
 
             this.numberOfWispsCaught += 1;
 
-            if (Object(_isDebug__WEBPACK_IMPORTED_MODULE_16__["isDebug"])()) {
+            if (Object(_isDebug__WEBPACK_IMPORTED_MODULE_7__["isDebug"])()) {
               if (this.numberOfWispsCaught > 1) {
-                this.gameState.next(_lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].CaughtAllWisps);
-              } else {
-                this.gameState.next(_lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].CaughtMinRequiredWisps);
+                this.gameState.next(_lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].CaughtAllWisps);
+              } else if (true) {
+                this.gameState.next(_lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].CaughtMinRequiredWisps);
 
                 for (var i = 0; i < 5; i += 1) {
                   var exitPortal = this.exitPortalsHidden.pop();
@@ -1798,9 +1767,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 }
               }
             } else if (this.numberOfWispsCaught === this.mapWisps.length) {
-              this.gameState.next(_lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].CaughtAllWisps);
+              this.gameState.next(_lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].CaughtAllWisps);
             } else if (this.numberOfWispsCaught > 0.6 * this.mapWisps.length) {
-              this.gameState.next(_lavastate__WEBPACK_IMPORTED_MODULE_9__["LavaState"].CaughtMinRequiredWisps);
+              this.gameState.next(_lavastate__WEBPACK_IMPORTED_MODULE_10__["LavaState"].CaughtMinRequiredWisps);
 
               var _exitPortal = this.exitPortalsHidden.pop();
 
@@ -1813,7 +1782,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           if (this.playerInfluenceRadius < 5) {
             var newInfluenceRadius = Math.floor(100 * Math.min(this.playerInfluenceRadius * 1.1, 5)) / 100;
             var diff = newInfluenceRadius - this.playerInfluenceRadius;
-            this.turnService.register(new _turnevent__WEBPACK_IMPORTED_MODULE_3__["TurnEventSubscription"](1000, function (sub) {
+            this.turnService.register(new _turnevent__WEBPACK_IMPORTED_MODULE_15__["TurnEventSubscription"](1000, function (sub) {
               sub.unsubscribe();
 
               if (_this3.playerInfluenceRadius >= 1) {
@@ -1838,7 +1807,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
             (_this$notificationTex = this.notificationText).push.apply(_this$notificationTex, _toConsumableArray(texts));
 
-            this.turnService.register(new _turnevent__WEBPACK_IMPORTED_MODULE_3__["TurnEventSubscription"](1000, function (event) {
+            this.turnService.register(new _turnevent__WEBPACK_IMPORTED_MODULE_15__["TurnEventSubscription"](1000, function (event) {
               var i = _this4.notificationText.indexOf(texts[0]);
 
               _this4.notificationText.splice(i, texts.length);
@@ -1858,7 +1827,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             this.player.playerSpeed.stop();
           }
 
-          var dialogRef = this.dialog.open(_lava_game_finish_lava_game_finish_component__WEBPACK_IMPORTED_MODULE_14__["LavaGameFinishComponent"], {
+          var dialogRef = this.dialog.open(_lava_game_finish_lava_game_finish_component__WEBPACK_IMPORTED_MODULE_8__["LavaGameFinishComponent"], {
             width: "600px",
             data: {
               name: name,
@@ -1872,7 +1841,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "showLeaderboard",
         value: function showLeaderboard(leaderboard) {
-          var dialogRef = this.dialog.open(_lava_leaderboard_lava_leaderboard_component__WEBPACK_IMPORTED_MODULE_15__["LavaLeaderboardComponent"], {
+          var dialogRef = this.dialog.open(_lava_leaderboard_lava_leaderboard_component__WEBPACK_IMPORTED_MODULE_9__["LavaLeaderboardComponent"], {
             width: "600px",
             data: leaderboard
           });
@@ -1884,27 +1853,27 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
     LavaLandComponent.ctorParameters = function () {
       return [{
-        type: _turn_service__WEBPACK_IMPORTED_MODULE_2__["TurnService"]
+        type: _turn_service__WEBPACK_IMPORTED_MODULE_14__["TurnService"]
       }, {
-        type: _backend_service__WEBPACK_IMPORTED_MODULE_10__["BackendService"]
+        type: _backend_service__WEBPACK_IMPORTED_MODULE_5__["BackendService"]
       }, {
-        type: _node_modules_angular_material__WEBPACK_IMPORTED_MODULE_13__["MatDialog"]
+        type: _node_modules_angular_material__WEBPACK_IMPORTED_MODULE_3__["MatDialog"]
       }];
     };
 
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])("canvasContainer", {
       read: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"],
-      static: false
+      "static": false
     })], LavaLandComponent.prototype, "screenCanvas", void 0);
     LavaLandComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-root",
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! raw-loader!./app.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html")).default,
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html"))["default"],
       encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewEncapsulation"].None,
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./app.component.css */
-      "./src/app/app.component.css")).default]
+      "./src/app/app.component.css"))["default"]]
     })], LavaLandComponent);
     /***/
   },
@@ -2070,15 +2039,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /* harmony import */
 
 
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/common/http */
+    "./node_modules/@angular/common/fesm2015/http.js");
     /* harmony import */
 
 
-    var _lavalandcommon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! ../../../lavalandcommon */
-    "../lavalandcommon/index.ts");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
 
 
@@ -2088,20 +2057,25 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /* harmony import */
 
 
-    var _isDebug__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _lavalandcommon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ../../../lavalandcommon */
+    "../lavalandcommon/index.ts");
+    /* harmony import */
+
+
+    var _isDebug__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! ./isDebug */
     "./src/app/isDebug.ts");
 
-    var devModeApiPaths = (_devModeApiPaths = {}, _defineProperty(_devModeApiPaths, _lavalandcommon__WEBPACK_IMPORTED_MODULE_2__["ClientMessageReasons"].GameSessionRequest, "http://localhost:8080/api/gamesession/"), _defineProperty(_devModeApiPaths, _lavalandcommon__WEBPACK_IMPORTED_MODULE_2__["ClientMessageReasons"].LeaderboardRequest, "http://localhost:8080/api/leaderboard/"), _defineProperty(_devModeApiPaths, _lavalandcommon__WEBPACK_IMPORTED_MODULE_2__["ClientMessageReasons"].MapFinished, "http://localhost:8080/api/mapfinished/"), _devModeApiPaths);
-    var productionApiPaths = (_productionApiPaths = {}, _defineProperty(_productionApiPaths, _lavalandcommon__WEBPACK_IMPORTED_MODULE_2__["ClientMessageReasons"].GameSessionRequest, "/api/gamesession/"), _defineProperty(_productionApiPaths, _lavalandcommon__WEBPACK_IMPORTED_MODULE_2__["ClientMessageReasons"].LeaderboardRequest, "/api/leaderboard/"), _defineProperty(_productionApiPaths, _lavalandcommon__WEBPACK_IMPORTED_MODULE_2__["ClientMessageReasons"].MapFinished, "/api/mapfinished/"), _productionApiPaths);
-    var apiPaths = Object(_isDebug__WEBPACK_IMPORTED_MODULE_4__["isDebug"])() ? devModeApiPaths : productionApiPaths;
+    var devModeApiPaths = (_devModeApiPaths = {}, _defineProperty(_devModeApiPaths, _lavalandcommon__WEBPACK_IMPORTED_MODULE_4__["ClientMessageReasons"].GameSessionRequest, "http://localhost:8080/api/gamesession/"), _defineProperty(_devModeApiPaths, _lavalandcommon__WEBPACK_IMPORTED_MODULE_4__["ClientMessageReasons"].LeaderboardRequest, "http://localhost:8080/api/leaderboard/"), _defineProperty(_devModeApiPaths, _lavalandcommon__WEBPACK_IMPORTED_MODULE_4__["ClientMessageReasons"].MapFinished, "http://localhost:8080/api/mapfinished/"), _devModeApiPaths);
+    var productionApiPaths = (_productionApiPaths = {}, _defineProperty(_productionApiPaths, _lavalandcommon__WEBPACK_IMPORTED_MODULE_4__["ClientMessageReasons"].GameSessionRequest, "/api/gamesession/"), _defineProperty(_productionApiPaths, _lavalandcommon__WEBPACK_IMPORTED_MODULE_4__["ClientMessageReasons"].LeaderboardRequest, "/api/leaderboard/"), _defineProperty(_productionApiPaths, _lavalandcommon__WEBPACK_IMPORTED_MODULE_4__["ClientMessageReasons"].MapFinished, "/api/mapfinished/"), _productionApiPaths);
+    var apiPaths = Object(_isDebug__WEBPACK_IMPORTED_MODULE_5__["isDebug"])() ? devModeApiPaths : productionApiPaths;
 
-    var BackendService =
-    /*#__PURE__*/
-    function () {
-      function BackendService() {
+    var BackendService = /*#__PURE__*/function () {
+      function BackendService(http) {
         _classCallCheck(this, BackendService);
 
+        this.http = http;
         this.gameId = null;
         this.map = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
         this.leaderboard = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
@@ -2113,16 +2087,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       _createClass(BackendService, [{
         key: "initGameSession",
         value: function initGameSession() {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee9() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee9() {
             var response, gameSessionRequestResponse;
             return regeneratorRuntime.wrap(function _callee9$(_context9) {
               while (1) {
                 switch (_context9.prev = _context9.next) {
                   case 0:
                     _context9.next = 2;
-                    return fetch(apiPaths[_lavalandcommon__WEBPACK_IMPORTED_MODULE_2__["ClientMessageReasons"].GameSessionRequest]);
+                    return fetch(apiPaths[_lavalandcommon__WEBPACK_IMPORTED_MODULE_4__["ClientMessageReasons"].GameSessionRequest]);
 
                   case 2:
                     response = _context9.sent;
@@ -2131,10 +2103,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
                   case 5:
                     gameSessionRequestResponse = _context9.sent;
+                    console.log('initGameSession', gameSessionRequestResponse);
                     this.gameId = gameSessionRequestResponse.gameId;
                     this.map.next(gameSessionRequestResponse.gameMap);
 
-                  case 8:
+                  case 9:
                   case "end":
                     return _context9.stop();
                 }
@@ -2145,10 +2118,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "gameOver",
         value: function gameOver(name, duration, finishMethod) {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee10() {
-            var mapFinishedRequest, response, mapFinishedResponse;
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee10() {
+            var mapFinishedRequest, mapFinishedResponse;
             return regeneratorRuntime.wrap(function _callee10$(_context10) {
               while (1) {
                 switch (_context10.prev = _context10.next) {
@@ -2159,22 +2130,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                       gameId: this.gameId,
                       name: name
                     };
-                    _context10.next = 3;
-                    return fetch(apiPaths[_lavalandcommon__WEBPACK_IMPORTED_MODULE_2__["ClientMessageReasons"].MapFinished], {
-                      method: 'post',
-                      body: JSON.stringify(mapFinishedRequest)
-                    });
+                    console.log(mapFinishedRequest);
+                    _context10.next = 4;
+                    return this.http.post(apiPaths[_lavalandcommon__WEBPACK_IMPORTED_MODULE_4__["ClientMessageReasons"].MapFinished], mapFinishedRequest).toPromise();
 
-                  case 3:
-                    response = _context10.sent;
-                    _context10.next = 6;
-                    return response.json();
-
-                  case 6:
+                  case 4:
                     mapFinishedResponse = _context10.sent;
                     this.leaderboard.next(mapFinishedResponse.leaderboard);
 
-                  case 8:
+                  case 6:
                   case "end":
                     return _context10.stop();
                 }
@@ -2187,7 +2151,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       return BackendService;
     }();
 
-    BackendService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])()], BackendService);
+    BackendService.ctorParameters = function () {
+      return [{
+        type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]
+      }];
+    };
+
+    BackendService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])()], BackendService);
     /***/
   },
 
@@ -2223,17 +2193,17 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /*! ./touchableObject */
     "./src/app/touchableObject.ts");
 
-    var ExitPortal =
-    /*#__PURE__*/
-    function (_touchableObject__WEB) {
+    var ExitPortal = /*#__PURE__*/function (_touchableObject__WEB) {
       _inherits(ExitPortal, _touchableObject__WEB);
+
+      var _super = _createSuper(ExitPortal);
 
       function ExitPortal(asset) {
         var _this6;
 
         _classCallCheck(this, ExitPortal);
 
-        _this6 = _possibleConstructorReturn(this, _getPrototypeOf(ExitPortal).call(this, asset));
+        _this6 = _super.call(this, asset);
         var oldInit = _this6.oninit;
 
         _this6.oninit = function (obj) {
@@ -2366,9 +2336,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /*! @angular/material/dialog */
     "./node_modules/@angular/material/esm2015/dialog.js");
 
-    var LavaGameFinishComponent =
-    /*#__PURE__*/
-    function () {
+    var LavaGameFinishComponent = /*#__PURE__*/function () {
       function LavaGameFinishComponent(dialogRef, data) {
         _classCallCheck(this, LavaGameFinishComponent);
 
@@ -2417,16 +2385,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     };
 
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])("nameField", {
-      static: true
+      "static": true
     })], LavaGameFinishComponent.prototype, "nameField", void 0);
     LavaGameFinishComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "lava-game-finish",
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! raw-loader!./lava-game-finish.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/lava-game-finish/lava-game-finish.component.html")).default,
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/lava-game-finish/lava-game-finish.component.html"))["default"],
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./lava-game-finish.component.css */
-      "./src/app/lava-game-finish/lava-game-finish.component.css")).default]
+      "./src/app/lava-game-finish/lava-game-finish.component.css"))["default"]]
     }), tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"]))], LavaGameFinishComponent);
     /***/
   },
@@ -2483,9 +2451,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
-    var LavaHeaderComponent =
-    /*#__PURE__*/
-    function () {
+    var LavaHeaderComponent = /*#__PURE__*/function () {
       function LavaHeaderComponent() {
         _classCallCheck(this, LavaHeaderComponent);
       }
@@ -2502,10 +2468,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       selector: "lavaheader",
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! raw-loader!./lava-header.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/lava-header/lava-header.component.html")).default,
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/lava-header/lava-header.component.html"))["default"],
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./lava-header.component.css */
-      "./src/app/lava-header/lava-header.component.css")).default]
+      "./src/app/lava-header/lava-header.component.css"))["default"]]
     })], LavaHeaderComponent);
     /***/
   },
@@ -2591,10 +2557,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       selector: "lava-leaderboard",
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! raw-loader!./lava-leaderboard.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/lava-leaderboard/lava-leaderboard.component.html")).default,
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/lava-leaderboard/lava-leaderboard.component.html"))["default"],
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./lava-leaderboard.component.css */
-      "./src/app/lava-leaderboard/lava-leaderboard.component.css")).default]
+      "./src/app/lava-leaderboard/lava-leaderboard.component.css"))["default"]]
     }), tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"]))], LavaLeaderboardComponent);
     /***/
   },
@@ -2660,10 +2626,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       selector: "lavanotification",
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! raw-loader!./lava-notification.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/lava-notification/lava-notification.component.html")).default,
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/lava-notification/lava-notification.component.html"))["default"],
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./lava-notification.component.css */
-      "./src/app/lava-notification/lava-notification.component.css")).default]
+      "./src/app/lava-notification/lava-notification.component.css"))["default"]]
     })], LavaNotificationComponent);
     /***/
   },
@@ -2720,9 +2686,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
-    var LavaStatisticsComponent =
-    /*#__PURE__*/
-    function () {
+    var LavaStatisticsComponent = /*#__PURE__*/function () {
       function LavaStatisticsComponent() {
         _classCallCheck(this, LavaStatisticsComponent);
       }
@@ -2743,10 +2707,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       selector: "lavastatistics",
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! raw-loader!./lava-statistics.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/lava-statistics/lava-statistics.component.html")).default,
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/lava-statistics/lava-statistics.component.html"))["default"],
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./lava-statistics.component.css */
-      "./src/app/lava-statistics/lava-statistics.component.css")).default]
+      "./src/app/lava-statistics/lava-statistics.component.css"))["default"]]
     })], LavaStatisticsComponent);
     /***/
   },
@@ -2829,17 +2793,17 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /*! ./playerSpeed */
     "./src/app/playerSpeed.ts");
 
-    var PlayerObject =
-    /*#__PURE__*/
-    function (_lavacanvas__WEBPACK_) {
+    var PlayerObject = /*#__PURE__*/function (_lavacanvas__WEBPACK_) {
       _inherits(PlayerObject, _lavacanvas__WEBPACK_);
+
+      var _super2 = _createSuper(PlayerObject);
 
       function PlayerObject(asset) {
         var _this9;
 
         _classCallCheck(this, PlayerObject);
 
-        _this9 = _possibleConstructorReturn(this, _getPrototypeOf(PlayerObject).call(this, asset));
+        _this9 = _super2.call(this, asset);
         _this9.isInCooldown = false;
         _this9.nextTurnActions = [];
         _this9.movementQueued = {
@@ -2871,28 +2835,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       _createClass(PlayerObject, [{
         key: "turn",
         value: function turn(obj) {
-          var _iteratorNormalCompletion5 = true;
-          var _didIteratorError5 = false;
-          var _iteratorError5 = undefined;
+          var _iterator5 = _createForOfIteratorHelper(this.nextTurnActions),
+              _step5;
 
           try {
-            for (var _iterator5 = this.nextTurnActions[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+            for (_iterator5.s(); !(_step5 = _iterator5.n()).done;) {
               var turnAction = _step5.value;
               turnAction(obj);
             }
           } catch (err) {
-            _didIteratorError5 = true;
-            _iteratorError5 = err;
+            _iterator5.e(err);
           } finally {
-            try {
-              if (!_iteratorNormalCompletion5 && _iterator5.return != null) {
-                _iterator5.return();
-              }
-            } finally {
-              if (_didIteratorError5) {
-                throw _iteratorError5;
-              }
-            }
+            _iterator5.f();
           }
 
           this.nextTurnActions = [];
@@ -2900,9 +2854,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "move",
         value: function move(movement) {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee11() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee11() {
             return regeneratorRuntime.wrap(function _callee11$(_context11) {
               while (1) {
                 switch (_context11.prev = _context11.next) {
@@ -2920,9 +2872,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "moveA",
         value: function moveA() {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee12() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee12() {
             var currentTime, dT, movementDirection, speedBoosterConstant, maxSpeedNormalizerConstant, maxSpeedNormalizer, totalSpeed, maxSpeedFactor, movementSpeed;
             return regeneratorRuntime.wrap(function _callee12$(_context12) {
               while (1) {
@@ -2990,9 +2940,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "queueMoveTo",
         value: function queueMoveTo(direction) {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee13() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee13() {
             return regeneratorRuntime.wrap(function _callee13$(_context13) {
               while (1) {
                 switch (_context13.prev = _context13.next) {
@@ -3047,9 +2995,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /*! rxjs */
     "./node_modules/rxjs/_esm2015/index.js");
 
-    var PlayerSpeed =
-    /*#__PURE__*/
-    function () {
+    var PlayerSpeed = /*#__PURE__*/function () {
       function PlayerSpeed() {
         var playerMaxSpeed = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 2.5;
         var playerMinSpeed = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0.75;
@@ -3141,15 +3087,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /*! ./touchableObject */
     "./src/app/touchableObject.ts");
 
-    var SpeedBoost =
-    /*#__PURE__*/
-    function (_touchableObject__WEB2) {
+    var SpeedBoost = /*#__PURE__*/function (_touchableObject__WEB2) {
       _inherits(SpeedBoost, _touchableObject__WEB2);
+
+      var _super3 = _createSuper(SpeedBoost);
 
       function SpeedBoost() {
         _classCallCheck(this, SpeedBoost);
 
-        return _possibleConstructorReturn(this, _getPrototypeOf(SpeedBoost).apply(this, arguments));
+        return _super3.apply(this, arguments);
       }
 
       _createClass(SpeedBoost, [{
@@ -3206,15 +3152,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /*! ./touchableObject */
     "./src/app/touchableObject.ts");
 
-    var SpeedBump =
-    /*#__PURE__*/
-    function (_touchableObject__WEB3) {
+    var SpeedBump = /*#__PURE__*/function (_touchableObject__WEB3) {
       _inherits(SpeedBump, _touchableObject__WEB3);
+
+      var _super4 = _createSuper(SpeedBump);
 
       function SpeedBump() {
         _classCallCheck(this, SpeedBump);
 
-        return _possibleConstructorReturn(this, _getPrototypeOf(SpeedBump).apply(this, arguments));
+        return _super4.apply(this, arguments);
       }
 
       return SpeedBump;
@@ -3255,17 +3201,17 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /*! ../lavacanvas */
     "./src/lavacanvas/index.ts");
 
-    var TouchableObject =
-    /*#__PURE__*/
-    function (_lavacanvas__WEBPACK_2) {
+    var TouchableObject = /*#__PURE__*/function (_lavacanvas__WEBPACK_2) {
       _inherits(TouchableObject, _lavacanvas__WEBPACK_2);
+
+      var _super5 = _createSuper(TouchableObject);
 
       function TouchableObject(asset) {
         var _this11;
 
         _classCallCheck(this, TouchableObject);
 
-        _this11 = _possibleConstructorReturn(this, _getPrototypeOf(TouchableObject).call(this, asset));
+        _this11 = _super5.call(this, asset);
         _this11.isInCooldown = false;
 
         _this11.oninit = function (obj) {
@@ -3280,9 +3226,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         value: function checkIfCouldTouch(targetCoordinate) {
           var xRadius = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 3;
           var yRadius = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 3;
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee14() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee14() {
             var currentCoordinate;
             return regeneratorRuntime.wrap(function _callee14$(_context14) {
               while (1) {
@@ -3392,9 +3336,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
-    var TurnService =
-    /*#__PURE__*/
-    function () {
+    var TurnService = /*#__PURE__*/function () {
       function TurnService() {
         var _this12 = this;
 
@@ -3463,9 +3405,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
     TurnService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])()], TurnService);
 
-    var TurnEventForService =
-    /*#__PURE__*/
-    function () {
+    var TurnEventForService = /*#__PURE__*/function () {
       function TurnEventForService(ev) {
         var _this14 = this;
 
@@ -3577,17 +3517,17 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /*! ./turnevent */
     "./src/app/turnevent.ts");
 
-    var Wisp =
-    /*#__PURE__*/
-    function (_lavacanvas__WEBPACK_3) {
+    var Wisp = /*#__PURE__*/function (_lavacanvas__WEBPACK_3) {
       _inherits(Wisp, _lavacanvas__WEBPACK_3);
+
+      var _super6 = _createSuper(Wisp);
 
       function Wisp(asset) {
         var _this15;
 
         _classCallCheck(this, Wisp);
 
-        _this15 = _possibleConstructorReturn(this, _getPrototypeOf(Wisp).call(this, asset));
+        _this15 = _super6.call(this, asset);
         _this15.moveAround = true;
         _this15.isGhost = false;
         _this15.caughtOnce = false;
@@ -3649,9 +3589,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         value: function checkIfCouldCatch(targetCoordinate) {
           var xRadius = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 3;
           var yRadius = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 3;
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee15() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee15() {
             var wispCoordinate;
             return regeneratorRuntime.wrap(function _callee15$(_context15) {
               while (1) {
@@ -3853,9 +3791,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /* harmony import */
 
 
-    var canvas_filters__WEBPACK_IMPORTED_MODULE_1___default =
-    /*#__PURE__*/
-    __webpack_require__.n(canvas_filters__WEBPACK_IMPORTED_MODULE_1__);
+    var canvas_filters__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(canvas_filters__WEBPACK_IMPORTED_MODULE_1__);
     /* harmony import */
 
 
@@ -3870,9 +3806,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       AssetColor[AssetColor["OriginalColor"] = 1] = "OriginalColor";
     })(AssetColor || (AssetColor = {}));
 
-    var Asset =
-    /*#__PURE__*/
-    function () {
+    var Asset = /*#__PURE__*/function () {
       function Asset(imageUrl) {
         var assetColor = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : AssetColor.OriginalColor;
         var displaySizeInTiles = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {
@@ -3894,9 +3828,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       _createClass(Asset, [{
         key: "init",
         value: function init() {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee16() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee16() {
             var im, imageCanvas, scaleRatio, ctx, imageData, filtered;
             return regeneratorRuntime.wrap(function _callee16$(_context16) {
               while (1) {
@@ -3938,10 +3870,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "drawOriginal",
         value: function drawOriginal() {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee17() {
-            var _ref, ctx, im;
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee17() {
+            var _yield$this$getClearC, ctx, im;
 
             return regeneratorRuntime.wrap(function _callee17$(_context17) {
               while (1) {
@@ -3951,9 +3881,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                     return this.getClearContext();
 
                   case 2:
-                    _ref = _context17.sent;
-                    ctx = _ref.ctx;
-                    im = _ref.im;
+                    _yield$this$getClearC = _context17.sent;
+                    ctx = _yield$this$getClearC.ctx;
+                    im = _yield$this$getClearC.im;
                     ctx.drawImage(im, 0, 0);
 
                     if (this.canvasFilter) {
@@ -3971,9 +3901,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "drawOriginalHelper",
         value: function drawOriginalHelper(ctx, im) {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee18() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee18() {
             return regeneratorRuntime.wrap(function _callee18$(_context18) {
               while (1) {
                 switch (_context18.prev = _context18.next) {
@@ -3993,9 +3921,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "image",
         value: function image() {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee19() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee19() {
             return regeneratorRuntime.wrap(function _callee19$(_context19) {
               while (1) {
                 switch (_context19.prev = _context19.next) {
@@ -4026,10 +3952,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         key: "showMotionBlur",
         value: function showMotionBlur(x, y) {
           var strength = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 2;
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee20() {
-            var _ref2, ctx, im, yStep, xStep;
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee20() {
+            var _yield$this$getClearC2, ctx, im, yStep, xStep;
 
             return regeneratorRuntime.wrap(function _callee20$(_context20) {
               while (1) {
@@ -4039,9 +3963,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                     return this.getClearContext();
 
                   case 2:
-                    _ref2 = _context20.sent;
-                    ctx = _ref2.ctx;
-                    im = _ref2.im;
+                    _yield$this$getClearC2 = _context20.sent;
+                    ctx = _yield$this$getClearC2.ctx;
+                    im = _yield$this$getClearC2.im;
 
                     if (y !== 0) {
                       ctx.globalAlpha = 1 / strength / 5;
@@ -4081,9 +4005,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         key: "showDarkBlur",
         value: function showDarkBlur() {
           var isDarkAndBlurry = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee21() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee21() {
             var _this17 = this;
 
             return regeneratorRuntime.wrap(function _callee21$(_context21) {
@@ -4116,9 +4038,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "showOriginal",
         value: function showOriginal() {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee22() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee22() {
             return regeneratorRuntime.wrap(function _callee22$(_context22) {
               while (1) {
                 switch (_context22.prev = _context22.next) {
@@ -4137,9 +4057,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "getClearContext",
         value: function getClearContext() {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee23() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee23() {
             var im, ctx;
             return regeneratorRuntime.wrap(function _callee23$(_context23) {
               while (1) {
@@ -4170,9 +4088,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "filterCanvas",
         value: function filterCanvas() {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee24() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee24() {
             return regeneratorRuntime.wrap(function _callee24$(_context24) {
               while (1) {
                 switch (_context24.prev = _context24.next) {
@@ -4245,9 +4161,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /*! ./world2canvas */
     "./src/lavacanvas/world2canvas.ts");
 
-    var CanvasEventHandler =
-    /*#__PURE__*/
-    function () {
+    var CanvasEventHandler = /*#__PURE__*/function () {
       function CanvasEventHandler(canvas, lavacanvasInternal) {
         var _this18 = this;
 
@@ -4359,9 +4273,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "handleInteractLocation",
         value: function handleInteractLocation(eventX, eventY) {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee25() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee25() {
             var pos, centerPos, xDif, yDif;
             return regeneratorRuntime.wrap(function _callee25$(_context25) {
               while (1) {
@@ -4532,9 +4444,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /* harmony import */
 
 
-    var rxjs_internal_ReplaySubject__WEBPACK_IMPORTED_MODULE_9___default =
-    /*#__PURE__*/
-    __webpack_require__.n(rxjs_internal_ReplaySubject__WEBPACK_IMPORTED_MODULE_9__);
+    var rxjs_internal_ReplaySubject__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(rxjs_internal_ReplaySubject__WEBPACK_IMPORTED_MODULE_9__);
     /* harmony import */
 
 
@@ -4572,9 +4482,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       return _asset__WEBPACK_IMPORTED_MODULE_12__["AssetColor"];
     });
 
-    var LavaLandComponent =
-    /*#__PURE__*/
-    function () {
+    var LavaLandComponent = /*#__PURE__*/function () {
       function LavaLandComponent(lavacanvasInternal, turnService) {
         _classCallCheck(this, LavaLandComponent);
 
@@ -4597,7 +4505,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           var _this20 = this;
 
           if (this.settings != null) {
-            this.lavacanvasInternal.setSettings(this.settings).catch(function (ex) {
+            this.lavacanvasInternal.setSettings(this.settings)["catch"](function (ex) {
               if (Object(src_app_isDebug__WEBPACK_IMPORTED_MODULE_10__["isDebug"])()) {
                 console.warn("Error while constructing the map!");
                 console.error(ex);
@@ -4625,28 +4533,19 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
               return _this20.mapDragSubject.complete;
             });
             this.lavacanvasInternal.centralObject = new _worldobjectinternal__WEBPACK_IMPORTED_MODULE_8__["WorldObjectInternal"](this.turnService, this.lavacanvasInternal, this.player);
-            var _iteratorNormalCompletion6 = true;
-            var _didIteratorError6 = false;
-            var _iteratorError6 = undefined;
+
+            var _iterator6 = _createForOfIteratorHelper(this.objects),
+                _step6;
 
             try {
-              for (var _iterator6 = this.objects[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
+              for (_iterator6.s(); !(_step6 = _iterator6.n()).done;) {
                 var object = _step6.value;
                 this.canvasObjects.push(new _worldobjectinternal__WEBPACK_IMPORTED_MODULE_8__["WorldObjectInternal"](this.turnService, this.lavacanvasInternal, object));
               }
             } catch (err) {
-              _didIteratorError6 = true;
-              _iteratorError6 = err;
+              _iterator6.e(err);
             } finally {
-              try {
-                if (!_iteratorNormalCompletion6 && _iterator6.return != null) {
-                  _iterator6.return();
-                }
-              } finally {
-                if (_didIteratorError6) {
-                  throw _iteratorError6;
-                }
-              }
+              _iterator6.f();
             }
           }
         }
@@ -4698,7 +4597,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])("canvasContainer", {
       read: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"],
-      static: true
+      "static": true
     })], LavaLandComponent.prototype, "screenCanvas", void 0);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], LavaLandComponent.prototype, "settings", void 0);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], LavaLandComponent.prototype, "objects", void 0);
@@ -4826,9 +4725,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /*! src/app/isDebug */
     "./src/app/isDebug.ts");
 
-    var LavaCanvasInternal =
-    /*#__PURE__*/
-    function () {
+    var LavaCanvasInternal = /*#__PURE__*/function () {
       function LavaCanvasInternal() {
         _classCallCheck(this, LavaCanvasInternal);
 
@@ -4902,9 +4799,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "constructMap",
         value: function constructMap() {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee26() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee26() {
             var canvasCoords, ctx, x, y, tileIdx, asset, _canvasCoords;
 
             return regeneratorRuntime.wrap(function _callee26$(_context26) {
@@ -4999,9 +4894,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }, {
         key: "setSettings",
         value: function setSettings(settings) {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee27() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee27() {
             return regeneratorRuntime.wrap(function _callee27$(_context27) {
               while (1) {
                 switch (_context27.prev = _context27.next) {
@@ -5041,10 +4934,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         key: "drawMap",
         value: function drawMap(ctx) {
           var extraObjects = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee28() {
-            var renderingCtx, _iteratorNormalCompletion7, _didIteratorError7, _iteratorError7, _iterator7, _step7, extraObject, extraCoordinate, canvasCoords, asset, assetOffset, centerCoordinate, assetCentralObject, assetOffsetCentralObject, drawAgain, translateCoordsThisTime, imageOffset;
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee28() {
+            var renderingCtx, _iterator7, _step7, extraObject, extraCoordinate, canvasCoords, asset, assetOffset, centerCoordinate, assetCentralObject, assetOffsetCentralObject, drawAgain, translateCoordsThisTime, imageOffset;
 
             return regeneratorRuntime.wrap(function _callee28$(_context28) {
               while (1) {
@@ -5064,97 +4955,78 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                   case 3:
                     renderingCtx = this.rendererCanvas.getContext("2d");
                     renderingCtx.drawImage(this.backgroundCanvas, 0, 0);
-                    _iteratorNormalCompletion7 = true;
-                    _didIteratorError7 = false;
-                    _iteratorError7 = undefined;
-                    _context28.prev = 8;
-                    _iterator7 = extraObjects[Symbol.iterator]();
+                    _iterator7 = _createForOfIteratorHelper(extraObjects);
+                    _context28.prev = 6;
 
-                  case 10:
-                    if (_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done) {
-                      _context28.next = 29;
+                    _iterator7.s();
+
+                  case 8:
+                    if ((_step7 = _iterator7.n()).done) {
+                      _context28.next = 26;
                       break;
                     }
 
                     extraObject = _step7.value;
 
                     if (!(extraObject.hidden === false)) {
-                      _context28.next = 26;
+                      _context28.next = 24;
                       break;
                     }
 
-                    _context28.next = 15;
+                    _context28.next = 13;
                     return extraObject.getCoordinate();
 
-                  case 15:
+                  case 13:
                     extraCoordinate = _context28.sent;
                     canvasCoords = Object(_world2canvas__WEBPACK_IMPORTED_MODULE_3__["world2Canvas"])(extraCoordinate);
                     asset = extraObject.asset;
                     assetOffset = asset.offset();
                     _context28.t0 = renderingCtx;
-                    _context28.next = 22;
+                    _context28.next = 20;
                     return asset.image();
 
-                  case 22:
+                  case 20:
                     _context28.t1 = _context28.sent;
                     _context28.t2 = canvasCoords.x - assetOffset.x;
                     _context28.t3 = canvasCoords.y - assetOffset.y;
 
                     _context28.t0.drawImage.call(_context28.t0, _context28.t1, _context28.t2, _context28.t3);
 
-                  case 26:
-                    _iteratorNormalCompletion7 = true;
-                    _context28.next = 10;
+                  case 24:
+                    _context28.next = 8;
                     break;
 
-                  case 29:
-                    _context28.next = 35;
+                  case 26:
+                    _context28.next = 31;
                     break;
+
+                  case 28:
+                    _context28.prev = 28;
+                    _context28.t4 = _context28["catch"](6);
+
+                    _iterator7.e(_context28.t4);
 
                   case 31:
                     _context28.prev = 31;
-                    _context28.t4 = _context28["catch"](8);
-                    _didIteratorError7 = true;
-                    _iteratorError7 = _context28.t4;
 
-                  case 35:
-                    _context28.prev = 35;
-                    _context28.prev = 36;
+                    _iterator7.f();
 
-                    if (!_iteratorNormalCompletion7 && _iterator7.return != null) {
-                      _iterator7.return();
-                    }
+                    return _context28.finish(31);
 
-                  case 38:
-                    _context28.prev = 38;
-
-                    if (!_didIteratorError7) {
-                      _context28.next = 41;
-                      break;
-                    }
-
-                    throw _iteratorError7;
-
-                  case 41:
-                    return _context28.finish(38);
-
-                  case 42:
-                    return _context28.finish(35);
-
-                  case 43:
-                    _context28.next = 45;
+                  case 34:
+                    _context28.next = 36;
                     return this.centralObject.getCoordinate();
 
-                  case 45:
+                  case 36:
                     centerCoordinate = _context28.sent;
                     this.centerCanvasCoords = Object(_world2canvas__WEBPACK_IMPORTED_MODULE_3__["world2Canvas"])(centerCoordinate);
                     assetCentralObject = this.centralObject.asset;
                     assetOffsetCentralObject = assetCentralObject.offset();
                     _context28.t5 = renderingCtx;
-                    _context28.next = 52;
+                    _context28.next = 43;
                     return assetCentralObject.image();
 
-                  case 52:
+                  case 43:
                     _context28.t6 = _context28.sent;
                     _context28.t7 = this.centerCanvasCoords.x - assetOffsetCentralObject.x;
                     _context28.t8 = this.centerCanvasCoords.y - assetOffsetCentralObject.y;
@@ -5207,12 +5079,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                     });
                     ctx.drawImage(this.rendererCanvas, -imageOffset.x, -imageOffset.y);
 
-                  case 70:
+                  case 61:
                   case "end":
                     return _context28.stop();
                 }
               }
-            }, _callee28, this, [[8, 31, 35, 43], [36,, 38, 42]]);
+            }, _callee28, this, [[6, 28, 31, 34]]);
           }));
         }
       }, {
@@ -5323,9 +5195,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /*! tslib */
     "./node_modules/tslib/tslib.es6.js");
 
-    var WorldObject =
-    /*#__PURE__*/
-    function () {
+    var WorldObject = /*#__PURE__*/function () {
       function WorldObject(asset) {
         _classCallCheck(this, WorldObject);
 
@@ -5391,13 +5261,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     /* harmony import */
 
 
-    var rxjs_internal_operators_take__WEBPACK_IMPORTED_MODULE_3___default =
-    /*#__PURE__*/
-    __webpack_require__.n(rxjs_internal_operators_take__WEBPACK_IMPORTED_MODULE_3__);
+    var rxjs_internal_operators_take__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(rxjs_internal_operators_take__WEBPACK_IMPORTED_MODULE_3__);
 
-    var WorldObjectInternal =
-    /*#__PURE__*/
-    function () {
+    var WorldObjectInternal = /*#__PURE__*/function () {
       function WorldObjectInternal(turnService, lavacanvasInternal, object) {
         var _this21 = this;
 
@@ -5466,9 +5332,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             y: 0
           };
           var showBlur = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee29() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee29() {
             var _this22 = this;
 
             var coordinateCanvas, coordinate, fncShowBlur, fncMoveExact, fncMoveY, fncMoveX, exactMovement, yMovement, xMovement;
@@ -5642,7 +5506,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["enableProdMode"])();
     }
 
-    Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_3__["AppModule"]).catch(function (err) {
+    Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_3__["AppModule"])["catch"](function (err) {
       return console.error(err);
     });
     /***/
@@ -5659,7 +5523,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   /***/
   function _(module, exports, __webpack_require__) {
     module.exports = __webpack_require__(
-    /*! D:\Projects\workspace\lavaland\lavaland-gui\src\main.ts */
+    /*! D:\code\lavaland\lavaland-gui\src\main.ts */
     "./src/main.ts");
     /***/
   }

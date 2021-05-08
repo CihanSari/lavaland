@@ -5,7 +5,6 @@ export declare class GameInstance {
     onclose: Function;
     constructor(map: GameMap);
     gameSessionSent: boolean;
-    mapSent: boolean;
     container: Record<string, any>;
 }
 export declare const activeGames: Map<string, GameInstance>;

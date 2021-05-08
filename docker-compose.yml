@@ -1,6 +1,6 @@
 version: '3'
 services:
-  clothingweb:
+  lavaland:
     image: node:latest
     volumes: 
       - ./:/tmp/nodelib

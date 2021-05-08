@@ -1,32 +1,22 @@
-import {
-  Component,
-  OnInit,
-  ViewChild,
-  ElementRef,
-  ViewEncapsulation
-} from "@angular/core";
-import { WorldCoordinates, GameMap } from "../../../lavalandcommon";
-import { TurnService } from "./turn.service";
-import { TurnEventSubscription } from "./turnevent";
-import { Wisp } from "./wisp";
-import { SpeedBoost } from "./speedboost";
-import { SpeedBump } from "./speedbump";
-import { ExitPortal } from "./exit";
-import { BehaviorSubject } from "rxjs";
-import { LavaState } from "./lavastate";
-import { BackendService } from "./backend.service";
-import * as LavaCanvas from "../lavacanvas";
-import { PlayerObject } from "./player";
-import { WorldObject } from "../lavacanvas/worldobject";
-import { MatDialog } from "../../node_modules/@angular/material";
-import {
-  LavaGameFinishComponent
-} from "./lava-game-finish/lava-game-finish.component";
-import {
-  LavaLeaderboardComponent,
-  LeaderboardData
-} from "./lava-leaderboard/lava-leaderboard.component";
+import { Component, ElementRef, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+
+import { GameMap, WorldCoordinates } from '../../../lavalandcommon';
+import { MatDialog } from '../../node_modules/@angular/material';
+import * as LavaCanvas from '../lavacanvas';
+import { WorldObject } from '../lavacanvas/worldobject';
+import { BackendService } from './backend.service';
+import { ExitPortal } from './exit';
 import { isDebug } from './isDebug';
+import { LavaGameFinishComponent } from './lava-game-finish/lava-game-finish.component';
+import { LavaLeaderboardComponent, LeaderboardData } from './lava-leaderboard/lava-leaderboard.component';
+import { LavaState } from './lavastate';
+import { PlayerObject } from './player';
+import { SpeedBoost } from './speedboost';
+import { SpeedBump } from './speedbump';
+import { TurnService } from './turn.service';
+import { TurnEventSubscription } from './turnevent';
+import { Wisp } from './wisp';
 
 @Component({
   selector: "app-root",
@@ -316,7 +306,7 @@ export class LavaLandComponent implements OnInit {
       if (isDebug()) {
         if (this.numberOfWispsCaught > 1) {
           this.gameState.next(LavaState.CaughtAllWisps);
-        } else {
+        } else if (true) {
           this.gameState.next(LavaState.CaughtMinRequiredWisps);
           for (let i = 0; i < 5; i += 1) {
             const exitPortal = this.exitPortalsHidden.pop();
